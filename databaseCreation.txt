@@ -1,0 +1,18 @@
+USE master
+GO
+
+IF EXISTS (SELECT * FROM sysdatabases WHERE name='NHSPatientServices')
+DROP DATABASE NHSPatientServices
+GO
+
+DECLARE @device_directory NVARCHAR(520)
+SELECT @device_directory = SUBSTRING(filename, 1, CHARINDEX(N'master.mdf', LOWER(filename)) - 1)
+FROM master.dbo.sysaltfiles WHERE dbid = 1 AND fileid = 1
+
+EXECUTE (N'CREATE DATABASE NHSPatientServices
+  ON PRIMARY (NAME = N''NHSPatientServices'', FILENAME = N''' + @device_directory + N'NHSPatientServices.mdf'')
+  LOG ON (NAME = N''NHSPatientServices_log'',  FILENAME = N''' + @device_directory + N'NHSPatientServices.ldf'')')
+GO
+
+
+
