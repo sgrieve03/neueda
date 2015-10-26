@@ -1,0 +1,72 @@
+EPIC SPRINT BACKLOG
+
+1 - As a patient i can search for practices which offer (eg yellow fever shots, smoking cecasation) particular services. 
+
+2 - As an interested employee if the NHS i can collect data about users of the application.
+
+3 - As an interested employee of the HNS i can login so that i can access user data. 
+
+4 - As an interested employee of the NHS i can retrieve/view key information about the users accessing the application
+
+5 - As an interested employee of the NHS i can see what services are provided per area so that i can determine areas which lack provision
+
+
+SPRINT BACKLOG
+
+1 - plan and normalise data sets
+
+2 - create filter page (No.1)
+
+3 - show all services on a dropdown box (No.1)
+
+4 - be able to enter postcode (No.1)
+
+5 - view results of search query (No.1)
+
+6 - allow the user to answer questions about male/female, age group (No.2)
+
+7 - block progress unless answered (No.2)
+
+8 - point 6 - save data to database (No.2)
+
+9 - login with NHS Number and password (No.3)
+
+10 - view spread sheet of data from point 8 (No.4)
+
+11 - view list of services available in each area - search on postcode (No.5)
+
+
+PRODUCT BACKLOG
+
+- As a patient i can search for practices which open on a saturday so that i can make a weekend appointment. 
+
+- As a patient i can get the name of all the nurses/doctors/managers available at my local practice.
+
+- As a patient i can see the physical location of my choosen practise on a map so that i can make my way there.
+
+- As a smoker i would like to find a gp which offers smoking sessation services so that i can give up.
+
+- As a patient i would like to find out what gps offer eps enabled prescriptions so that i can collect my perscriptions directly
+
+- As a patient i would like to find the nearest NHS pharmacist to my gp so that i can collect my script
+
+- As a patient i would like to find the nearest GP to me with the highest rate of customer satisfaction
+
+- As a patient i would like to be directed to the application form for registering with my chosen gp
+
+- As a patient i would like to find information about waiting times for my chosen gp
+
+- As an interested employee of the NHS i can see how many gp's per postcode
+
+- As an interested employee of the NHS i can see how many gp/pharmacists have websites so that we determine funding for the same
+
+- As an interested employee of the NHS i can see how many gp's provide EPS so that i can determine areas which need to be improved
+
+- As an interested employee of the NHS i can see what average waiting times are so that i can determine areas which could benefit from improvement
+
+- As an interested employee of the NHS i can see what gp/pharm open out of hrs to determine areas which lack provision
+
+- As an interested employee of the NHS i can see the number of patients registered at various gp to determine spread/optimum numbers etc...
+
+- As an interested employee of the NHS i can see the proportion of males and females using the GP so that we can target sections for checkups
+
