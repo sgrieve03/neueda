@@ -1,0 +1,43 @@
+There are two main end users anticpated for this product - patient - information about gp's and NHS pharmacist
+							 - Government - statistical information about GP and Pharmacy provisions
+
+Patient - 
+
+1 - As a patient i can search for practices which offer (eg yellow fever shots, smoking cecasation) particular services. 
+
+2 - As a patient i can search for practices which open on a saturday so that i can make a weekend appointment.
+
+3 - As a patient i can get the name of all the nurses/doctors/managers available at my local practice.
+
+4 - As a patient i can see the physical location of my choosen practise on a map so that i can make my way there.
+
+#5 - As a smoker i would like to find a gp which offers smoking sessation services so that i can give up.
+
+6 - As a patient i would like to find out what gps offer eps enabled prescriptions so that i can collect my perscriptions directly
+
+7 - As a patient i would like to find the nearest NHS pharmacist to my gp so that i can collect my script
+
+8 - As a patient i would like to find the nearest GP to me with the highest rate of customer satisfaction
+
+9 - As a patient i would like to be directed to the application form for registering with my chosen gp
+
+10 - As a patient i would like to find information about waiting times for my chosen gp
+
+
+Government - 
+
+1 - As an interested employee of the NHS i can see how many gp's per postcode
+
+2 - As an interested employee of the NHS i can see how many gp/pharmacists have websites so that we determine funding for the same
+
+3 - As an interested employee of the NHS i can see how many gp's provide EPS so that i can determine areas which need to be improved
+
+4 - As an interested employee of the NHS i can see what services are provided per area so that i can determine areas which lack provision
+
+5 - As an interested employee of the NHS i can see what average waiting times are so that i can determine areas which could benefit from improvement
+
+6 - As an interested employee of the NHS i can see what gp/pharm open out of hrs to determine areas which lack provision
+
+7 - As an interested employee of the NHS i can see the number of patients registered at various gp to determine spread/optimum numbers etc...
+
+8 - As an interested employee of the NHS i can see the proportion of males and females using the GP so that we can target sections for checkups
