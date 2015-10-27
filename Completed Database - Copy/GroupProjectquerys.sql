@@ -59,11 +59,12 @@ PRIMARY KEY (Service_ID)
 
 
 CREATE TABLE ServicesOrganisation (
+Services_Organisation_ID INTEGER IDENTITY (1,1),
 Ref_Organisation_Details_ID INTEGER NOT NULL,
 Ref_Service_ID INTEGER NOT NULL,
 FOREIGN KEY (Ref_Service_ID) REFERENCES GP_Services(Service_ID),
 FOREIGN KEY (Ref_Organisation_Details_ID) REFERENCES Organisation_Details(ID),
-PRIMARY KEY (Ref_Organisation_Details_ID, Ref_Service_ID)
+PRIMARY KEY (Services_Organisation_ID)
 )
 
 
@@ -75,9 +76,10 @@ PRIMARY KEY (Parent_ID)
 )
 
 CREATE TABLE ParentOrganisation(
+Parent_Organisation_ID INTEGER IDENTITY (1,1),
 Ref_Organisation_Details_ID INTEGER,
 Ref_Parent_ID INTEGER,
-PRIMARY KEY(Ref_Organisation_Details_ID, Ref_Parent_ID),
+PRIMARY KEY(Parent_Organisation_ID),
 FOREIGN KEY (Ref_Parent_ID) REFERENCES Parent(Parent_ID),
 FOREIGN KEY (Ref_Organisation_Details_ID) REFERENCES Organisation_Details(ID)
 )

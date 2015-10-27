@@ -51,81 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Address.cs">
-      <DependentUpon>NHSPatientServiceDAL.tt</DependentUpon>
-    </Compile>
     <Compile Include="Class1.cs" />
-    <Compile Include="Email.cs">
-      <DependentUpon>NHSPatientServiceDAL.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Fax.cs">
-      <DependentUpon>NHSPatientServiceDAL.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GP_Services.cs">
-      <DependentUpon>NHSPatientServiceDAL.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Location.cs">
-      <DependentUpon>NHSPatientServiceDAL.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Lookup_GP_Services.cs">
-      <DependentUpon>NHSPatientServiceDAL.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NHSPatientServiceDAL.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NHSPatientServiceDAL.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NHSPatientServiceDAL.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NHSPatientServiceDAL.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NHSPatientServiceDAL.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NHSPatientServiceDAL.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Organisation_Details.cs">
-      <DependentUpon>NHSPatientServiceDAL.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Organisation_Type_Table.cs">
-      <DependentUpon>NHSPatientServiceDAL.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Parent_Table.cs">
-      <DependentUpon>NHSPatientServiceDAL.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Telephone.cs">
-      <DependentUpon>NHSPatientServiceDAL.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Website.cs">
-      <DependentUpon>NHSPatientServiceDAL.tt</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="NHSPatientServiceDAL.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>NHSPatientServiceDAL.Designer.cs</LastGenOutput>
-    </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <None Include="NHSPatientServiceDAL.edmx.diagram">
-      <DependentUpon>NHSPatientServiceDAL.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="NHSPatientServiceDAL.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>NHSPatientServiceDAL.edmx</DependentUpon>
-      <LastGenOutput>NHSPatientServiceDAL.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="NHSPatientServiceDAL.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>NHSPatientServiceDAL.edmx</DependentUpon>
-      <LastGenOutput>NHSPatientServiceDAL.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

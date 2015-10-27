@@ -1,0 +1,6 @@
+c:\users\n_grad\documents\visual studio 2015\Projects\NHSPatientService\NHSPatientService\bin\NHSPatientService.dll.config
+c:\users\n_grad\documents\visual studio 2015\Projects\NHSPatientService\NHSPatientService\bin\NHSPatientService.dll
+c:\users\n_grad\documents\visual studio 2015\Projects\NHSPatientService\NHSPatientService\bin\NHSPatientService.pdb
+c:\users\n_grad\documents\visual studio 2015\Projects\NHSPatientService\NHSPatientService\obj\Debug\NHSPatientService.csprojResolveAssemblyReference.cache
+c:\users\n_grad\documents\visual studio 2015\Projects\NHSPatientService\NHSPatientService\obj\Debug\NHSPatientService.dll
+c:\users\n_grad\documents\visual studio 2015\Projects\NHSPatientService\NHSPatientService\obj\Debug\NHSPatientService.pdb

@@ -1,0 +1,10 @@
+c:\users\n_grad\documents\visual studio 2015\Projects\NHSPatientService\NHSPatientModel\bin\Debug\NHSPatientModel.dll.config
+c:\users\n_grad\documents\visual studio 2015\Projects\NHSPatientService\NHSPatientModel\bin\Debug\NHSPatientModel.dll
+c:\users\n_grad\documents\visual studio 2015\Projects\NHSPatientService\NHSPatientModel\bin\Debug\NHSPatientModel.pdb
+c:\users\n_grad\documents\visual studio 2015\Projects\NHSPatientService\NHSPatientModel\bin\Debug\EntityFramework.dll
+c:\users\n_grad\documents\visual studio 2015\Projects\NHSPatientService\NHSPatientModel\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\n_grad\documents\visual studio 2015\Projects\NHSPatientService\NHSPatientModel\bin\Debug\EntityFramework.xml
+c:\users\n_grad\documents\visual studio 2015\Projects\NHSPatientService\NHSPatientModel\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\n_grad\documents\visual studio 2015\Projects\NHSPatientService\NHSPatientModel\obj\Debug\NHSPatientModel.csprojResolveAssemblyReference.cache
+c:\users\n_grad\documents\visual studio 2015\Projects\NHSPatientService\NHSPatientModel\obj\Debug\NHSPatientModel.dll
+c:\users\n_grad\documents\visual studio 2015\Projects\NHSPatientService\NHSPatientModel\obj\Debug\NHSPatientModel.pdb
