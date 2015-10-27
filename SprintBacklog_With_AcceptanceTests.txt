@@ -1,0 +1,103 @@
+EPIC SPRINT BACKLOG
+
+1 - As a patient i can search for practices which offer (eg yellow fever shots, smoking cecasation) particular services. 
+
+2 - As an interested employee if the NHS i can collect data about users of the application.
+
+3 - As an interested employee of the HNS i can login so that i can access user data. 
+
+4 - As an interested employee of the NHS i can retrieve/view key information about the users accessing the application
+
+5 - As an interested employee of the NHS i can see what services are provided per area so that i can determine areas which lack provision
+
+
+SPRINT BACKLOG
+
+1 - plan and normalise data sets
+
+Acceptance test: The database will be in third normal form - with the exception of the address table which will have repeat - this is regarded as minimal
+
+2 - create filter page (No.1)
+
+Acceptance test: When the application loads the user will be presented with a view which enables them to filter their search
+
+3 - show all services on a dropdown box (No.1)
+
+Acceptance test: The user will be presented with a dropdown box which contains all the possible services. The user will be able to select a service from the list.
+		 Upon selection the users choice will populate the search area.		
+
+4 - be able to enter postcode (No.1)
+
+Acceptance test: The user will be presented with a blank text field, labelled postcode. The user will be able to enter a postcode. This will be validated.
+		 The user will be prompted that the postcode is incorrect (if it is), otherwise it will populate the search area.
+
+5 - view results of search query (No.1)
+
+Acceptance test: The user will be able to push the search botton. Upon search with the correct details, the user will be presented with a list of (5)
+		 GP's close to their given postcode which provide the service they have selected.
+
+6 - allow the user to answer questions about male/female, age group (No.2)
+
+Acceptance test: The user will be presented with male/female radio buttons. Only one should be able to be selected at a time. The user should be able to change
+		 their selection. The user shall be presented with a drop down list of age groups to select from. Only one shall be able to be selected at a time.
+		 The user should be able to change their selection. 
+
+7 - block progress unless answered (No.2)
+
+Acceptance test: Without answering the previous questions the user shall be blocked from proceeding.
+
+8 - point 6 - save data to database (No.2)
+
+Acceptance test: Upon pressing the search button, all details of the users selection will be captured and sent to the database.
+
+9 - login with NHS Number and password (No.3)
+
+Acceptance test: The user shall be presented with a login button. Upon selecting the button, the user will be presented with a username and password area. Upon 
+		 entering a correct user name and password and pressing the enter button the user will be brought to the registered user area. 
+
+10 - view spread sheet of data from point 8 (No.4)
+
+Acceptance test: The user shall be presented with a graphical representation of the application user statistics.Upon clicking the graphs the user will be 
+		 able to drill down into the data.
+
+11 - view list of services available in each area - search on postcode (No.5)
+
+Acceptance test: The user will be presented with an area in which to enter a postcode. Upon entering an appropriate postcode and selecting the search button
+		 the user will presented with a graph displaying the services available in that area. Upon clicking the graph the user can drill down into the 
+		 number of gp's providing those services.
+
+
+PRODUCT BACKLOG
+
+- As a patient i can search for practices which open on a saturday so that i can make a weekend appointment. 
+
+- As a patient i can get the name of all the nurses/doctors/managers available at my local practice.
+
+- As a patient i can see the physical location of my choosen practise on a map so that i can make my way there.
+
+- As a smoker i would like to find a gp which offers smoking sessation services so that i can give up.
+
+- As a patient i would like to find out what gps offer eps enabled prescriptions so that i can collect my perscriptions directly
+
+- As a patient i would like to find the nearest NHS pharmacist to my gp so that i can collect my script
+
+- As a patient i would like to find the nearest GP to me with the highest rate of customer satisfaction
+
+- As a patient i would like to be directed to the application form for registering with my chosen gp
+
+- As a patient i would like to find information about waiting times for my chosen gp
+
+- As an interested employee of the NHS i can see how many gp's per postcode
+
+- As an interested employee of the NHS i can see how many gp/pharmacists have websites so that we determine funding for the same
+
+- As an interested employee of the NHS i can see how many gp's provide EPS so that i can determine areas which need to be improved
+
+- As an interested employee of the NHS i can see what average waiting times are so that i can determine areas which could benefit from improvement
+
+- As an interested employee of the NHS i can see what gp/pharm open out of hrs to determine areas which lack provision
+
+- As an interested employee of the NHS i can see the number of patients registered at various gp to determine spread/optimum numbers etc...
+
+- As an interested employee of the NHS i can see the proportion of males and females using the GP so that we can target sections for checkups
+
