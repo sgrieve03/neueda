@@ -1,0 +1,15 @@
+c:\users\n_grad\documents\visual studio 2015\Projects\PieChart\PieChart\bin\Debug\PieChart.exe.config
+c:\users\n_grad\documents\visual studio 2015\Projects\PieChart\PieChart\bin\Debug\PieChart.exe
+c:\users\n_grad\documents\visual studio 2015\Projects\PieChart\PieChart\bin\Debug\PieChart.pdb
+c:\users\n_grad\documents\visual studio 2015\Projects\PieChart\PieChart\bin\Debug\De.TorstenMandelkow.MetroChart.dll
+c:\users\n_grad\documents\visual studio 2015\Projects\PieChart\PieChart\obj\Debug\MainWindow.g.cs
+c:\users\n_grad\documents\visual studio 2015\Projects\PieChart\PieChart\obj\Debug\App.g.cs
+c:\users\n_grad\documents\visual studio 2015\Projects\PieChart\PieChart\obj\Debug\PieChart_MarkupCompile.cache
+c:\users\n_grad\documents\visual studio 2015\Projects\PieChart\PieChart\obj\Debug\PieChart_MarkupCompile.lref
+c:\users\n_grad\documents\visual studio 2015\Projects\PieChart\PieChart\obj\Debug\App.baml
+c:\users\n_grad\documents\visual studio 2015\Projects\PieChart\PieChart\obj\Debug\MainWindow.baml
+c:\users\n_grad\documents\visual studio 2015\Projects\PieChart\PieChart\obj\Debug\PieChart.g.resources
+c:\users\n_grad\documents\visual studio 2015\Projects\PieChart\PieChart\obj\Debug\PieChart.Properties.Resources.resources
+c:\users\n_grad\documents\visual studio 2015\Projects\PieChart\PieChart\obj\Debug\PieChart.csproj.GenerateResource.Cache
+c:\users\n_grad\documents\visual studio 2015\Projects\PieChart\PieChart\obj\Debug\PieChart.exe
+c:\users\n_grad\documents\visual studio 2015\Projects\PieChart\PieChart\obj\Debug\PieChart.pdb
