@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NHSPatientServicesModelStoreContainer" CdmEntityContainer="NHSPatientServicesEntities">
+    <EntitySetMapping Name="Addresses">
+      <EntityTypeMapping TypeName="NHSPatientServicesModel.Address">
+        <MappingFragment StoreEntitySet="Addresses">
+          <ScalarProperty Name="Ref_Organisation_Details_ID" ColumnName="Ref_Organisation_Details_ID" />
+          <ScalarProperty Name="Address_Line_1" ColumnName="Address_Line_1" />
+          <ScalarProperty Name="Address_Line_2" ColumnName="Address_Line_2" />
+          <ScalarProperty Name="Address_Line_3" ColumnName="Address_Line_3" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="County" ColumnName="County" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Emails">
+      <EntityTypeMapping TypeName="NHSPatientServicesModel.Email">
+        <MappingFragment StoreEntitySet="Email">
+          <ScalarProperty Name="Ref_Organisation_Details_ID" ColumnName="Ref_Organisation_Details_ID" />
+          <ScalarProperty Name="Email1" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Faxes">
+      <EntityTypeMapping TypeName="NHSPatientServicesModel.Fax">
+        <MappingFragment StoreEntitySet="Fax">
+          <ScalarProperty Name="Ref_Organisation_Details_ID" ColumnName="Ref_Organisation_Details_ID" />
+          <ScalarProperty Name="Fax_Number" ColumnName="Fax_Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GP_Services">
+      <EntityTypeMapping TypeName="NHSPatientServicesModel.GP_Services">
+        <MappingFragment StoreEntitySet="GP_Services">
+          <ScalarProperty Name="Service_ID" ColumnName="Service_ID" />
+          <ScalarProperty Name="GP_Service_Name" ColumnName="GP_Service_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locations">
+      <EntityTypeMapping TypeName="NHSPatientServicesModel.Location">
+        <MappingFragment StoreEntitySet="Location">
+          <ScalarProperty Name="Ref_Organisation_Details_ID" ColumnName="Ref_Organisation_Details_ID" />
+          <ScalarProperty Name="Longtitude" ColumnName="Longtitude" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lookup_GP_Services">
+      <EntityTypeMapping TypeName="NHSPatientServicesModel.Lookup_GP_Services">
+        <MappingFragment StoreEntitySet="Lookup_GP_Services">
+          <ScalarProperty Name="Ref_Organisation_Details_ID" ColumnName="Ref_Organisation_Details_ID" />
+          <ScalarProperty Name="Ref_Service_ID" ColumnName="Ref_Service_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Organisation_Details">
+      <EntityTypeMapping TypeName="NHSPatientServicesModel.Organisation_Details">
+        <MappingFragment StoreEntitySet="Organisation_Details">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Organisation_ID" ColumnName="Organisation_ID" />
+          <ScalarProperty Name="Organisation_Name" ColumnName="Organisation_Name" />
+          <ScalarProperty Name="Ref_Organisation_Type_ID" ColumnName="Ref_Organisation_Type_ID" />
+          <ScalarProperty Name="EPS_Enabled" ColumnName="EPS_Enabled" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Organisation_Type_Table">
+      <EntityTypeMapping TypeName="NHSPatientServicesModel.Organisation_Type_Table">
+        <MappingFragment StoreEntitySet="Organisation_Type_Table">
+          <ScalarProperty Name="Organisation_Type_ID" ColumnName="Organisation_Type_ID" />
+          <ScalarProperty Name="Organisation_Type" ColumnName="Organisation_Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Parent_Table">
+      <EntityTypeMapping TypeName="NHSPatientServicesModel.Parent_Table">
+        <MappingFragment StoreEntitySet="Parent_Table">
+          <ScalarProperty Name="Parent_ID" ColumnName="Parent_ID" />
+          <ScalarProperty Name="ODSCode" ColumnName="ODSCode" />
+          <ScalarProperty Name="Parent_Name" ColumnName="Parent_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Telephones">
+      <EntityTypeMapping TypeName="NHSPatientServicesModel.Telephone">
+        <MappingFragment StoreEntitySet="Telephone">
+          <ScalarProperty Name="Ref_Organisation_Details_ID" ColumnName="Ref_Organisation_Details_ID" />
+          <ScalarProperty Name="Telephone_Number" ColumnName="Telephone_Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Websites">
+      <EntityTypeMapping TypeName="NHSPatientServicesModel.Website">
+        <MappingFragment StoreEntitySet="Website">
+          <ScalarProperty Name="Ref_Organisation_Details_ID" ColumnName="Ref_Organisation_Details_ID" />
+          <ScalarProperty Name="Website1" ColumnName="Website" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="LookUp_Parent_Table" TypeName="NHSPatientServicesModel.LookUp_Parent_Table" StoreEntitySet="LookUp_Parent_Table">
+      <EndProperty Name="Organisation_Details">
+        <ScalarProperty Name="ID" ColumnName="Ref_Organisation_Details_ID" />
+      </EndProperty>
+      <EndProperty Name="Parent_Table">
+        <ScalarProperty Name="Parent_ID" ColumnName="Ref_Parent_ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

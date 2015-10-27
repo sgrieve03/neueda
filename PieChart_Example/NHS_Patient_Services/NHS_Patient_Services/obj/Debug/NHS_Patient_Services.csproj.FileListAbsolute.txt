@@ -1,0 +1,10 @@
+C:\Users\nda\Documents\GitHub\neueda\PieChart_Example\NHS_Patient_Services\NHS_Patient_Services\bin\Debug\NHS_Patient_Services.dll.config
+C:\Users\nda\Documents\GitHub\neueda\PieChart_Example\NHS_Patient_Services\NHS_Patient_Services\bin\Debug\NHS_Patient_Services.dll
+C:\Users\nda\Documents\GitHub\neueda\PieChart_Example\NHS_Patient_Services\NHS_Patient_Services\bin\Debug\NHS_Patient_Services.pdb
+C:\Users\nda\Documents\GitHub\neueda\PieChart_Example\NHS_Patient_Services\NHS_Patient_Services\bin\Debug\EntityFramework.dll
+C:\Users\nda\Documents\GitHub\neueda\PieChart_Example\NHS_Patient_Services\NHS_Patient_Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nda\Documents\GitHub\neueda\PieChart_Example\NHS_Patient_Services\NHS_Patient_Services\bin\Debug\EntityFramework.xml
+C:\Users\nda\Documents\GitHub\neueda\PieChart_Example\NHS_Patient_Services\NHS_Patient_Services\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nda\Documents\GitHub\neueda\PieChart_Example\NHS_Patient_Services\NHS_Patient_Services\obj\Debug\NHS_Patient_Services.csprojResolveAssemblyReference.cache
+C:\Users\nda\Documents\GitHub\neueda\PieChart_Example\NHS_Patient_Services\NHS_Patient_Services\obj\Debug\NHS_Patient_Services.dll
+C:\Users\nda\Documents\GitHub\neueda\PieChart_Example\NHS_Patient_Services\NHS_Patient_Services\obj\Debug\NHS_Patient_Services.pdb

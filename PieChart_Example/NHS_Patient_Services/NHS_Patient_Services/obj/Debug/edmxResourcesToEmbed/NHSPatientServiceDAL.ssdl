@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NHSPatientServicesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Addresses">
+    <Key>
+      <PropertyRef Name="Ref_Organisation_Details_ID" />
+    </Key>
+    <Property Name="Ref_Organisation_Details_ID" Type="int" Nullable="false" />
+    <Property Name="Address_Line_1" Type="varchar(max)" Nullable="false" />
+    <Property Name="Address_Line_2" Type="varchar(max)" Nullable="false" />
+    <Property Name="Address_Line_3" Type="varchar(max)" />
+    <Property Name="City" Type="varchar(max)" />
+    <Property Name="County" Type="varchar(max)" />
+    <Property Name="Postcode" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Email">
+    <Key>
+      <PropertyRef Name="Ref_Organisation_Details_ID" />
+      <PropertyRef Name="Email" />
+    </Key>
+    <Property Name="Ref_Organisation_Details_ID" Type="int" Nullable="false" />
+    <Property Name="Email" Type="char" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Fax">
+    <Key>
+      <PropertyRef Name="Ref_Organisation_Details_ID" />
+      <PropertyRef Name="Fax_Number" />
+    </Key>
+    <Property Name="Ref_Organisation_Details_ID" Type="int" Nullable="false" />
+    <Property Name="Fax_Number" Type="char" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GP_Services">
+    <Key>
+      <PropertyRef Name="Service_ID" />
+      <PropertyRef Name="GP_Service_Name" />
+    </Key>
+    <Property Name="Service_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GP_Service_Name" Type="char" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Location">
+    <Key>
+      <PropertyRef Name="Ref_Organisation_Details_ID" />
+      <PropertyRef Name="Longtitude" />
+      <PropertyRef Name="Latitude" />
+    </Key>
+    <Property Name="Ref_Organisation_Details_ID" Type="int" Nullable="false" />
+    <Property Name="Longtitude" Type="float" Nullable="false" />
+    <Property Name="Latitude" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Lookup_GP_Services">
+    <Key>
+      <PropertyRef Name="Ref_Organisation_Details_ID" />
+      <PropertyRef Name="Ref_Service_ID" />
+    </Key>
+    <Property Name="Ref_Organisation_Details_ID" Type="int" Nullable="false" />
+    <Property Name="Ref_Service_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LookUp_Parent_Table">
+    <Key>
+      <PropertyRef Name="Ref_Organisation_Details_ID" />
+      <PropertyRef Name="Ref_Parent_ID" />
+    </Key>
+    <Property Name="Ref_Organisation_Details_ID" Type="int" Nullable="false" />
+    <Property Name="Ref_Parent_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Organisation_Details">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Organisation_ID" Type="int" Nullable="false" />
+    <Property Name="Organisation_Name" Type="varchar(max)" Nullable="false" />
+    <Property Name="Ref_Organisation_Type_ID" Type="int" Nullable="false" />
+    <Property Name="EPS_Enabled" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Organisation_Type_Table">
+    <Key>
+      <PropertyRef Name="Organisation_Type_ID" />
+    </Key>
+    <Property Name="Organisation_Type_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Organisation_Type" Type="char" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Parent_Table">
+    <Key>
+      <PropertyRef Name="Parent_ID" />
+    </Key>
+    <Property Name="Parent_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ODSCode" Type="varchar(max)" />
+    <Property Name="Parent_Name" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Telephone">
+    <Key>
+      <PropertyRef Name="Ref_Organisation_Details_ID" />
+      <PropertyRef Name="Telephone_Number" />
+    </Key>
+    <Property Name="Ref_Organisation_Details_ID" Type="int" Nullable="false" />
+    <Property Name="Telephone_Number" Type="char" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Website">
+    <Key>
+      <PropertyRef Name="Ref_Organisation_Details_ID" />
+      <PropertyRef Name="Website" />
+    </Key>
+    <Property Name="Ref_Organisation_Details_ID" Type="int" Nullable="false" />
+    <Property Name="Website" Type="char" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Addresses__Ref_O__24E777C3">
+    <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="1" />
+    <End Role="Addresses" Type="Self.Addresses" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Organisation_Details">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Addresses">
+        <PropertyRef Name="Ref_Organisation_Details_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Email__Ref_Organ__1D4655FB">
+    <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="1" />
+    <End Role="Email" Type="Self.Email" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Organisation_Details">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Email">
+        <PropertyRef Name="Ref_Organisation_Details_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Fax__Ref_Organis__15A53433">
+    <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="1" />
+    <End Role="Fax" Type="Self.Fax" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Organisation_Details">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Fax">
+        <PropertyRef Name="Ref_Organisation_Details_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Location__Ref_Or__11D4A34F">
+    <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="1" />
+    <End Role="Location" Type="Self.Location" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Organisation_Details">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Location">
+        <PropertyRef Name="Ref_Organisation_Details_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Lookup_GP__Ref_O__084B3915">
+    <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="1" />
+    <End Role="Lookup_GP_Services" Type="Self.Lookup_GP_Services" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Organisation_Details">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Lookup_GP_Services">
+        <PropertyRef Name="Ref_Organisation_Details_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK__Lookup_GP__Ref_S__075714DC' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK__Lookup_GP__Ref_S__075714DC" />-->
+  <Association Name="FK__LookUp_Pa__Ref_O__0E04126B">
+    <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="1" />
+    <End Role="LookUp_Parent_Table" Type="Self.LookUp_Parent_Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Organisation_Details">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LookUp_Parent_Table">
+        <PropertyRef Name="Ref_Organisation_Details_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LookUp_Pa__Ref_P__0D0FEE32">
+    <End Role="Parent_Table" Type="Self.Parent_Table" Multiplicity="1" />
+    <End Role="LookUp_Parent_Table" Type="Self.LookUp_Parent_Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Parent_Table">
+        <PropertyRef Name="Parent_ID" />
+      </Principal>
+      <Dependent Role="LookUp_Parent_Table">
+        <PropertyRef Name="Ref_Parent_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Organisat__Ref_O__019E3B86">
+    <End Role="Organisation_Type_Table" Type="Self.Organisation_Type_Table" Multiplicity="1" />
+    <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Organisation_Type_Table">
+        <PropertyRef Name="Organisation_Type_ID" />
+      </Principal>
+      <Dependent Role="Organisation_Details">
+        <PropertyRef Name="Ref_Organisation_Type_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Telephone__Ref_O__1975C517">
+    <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="1" />
+    <End Role="Telephone" Type="Self.Telephone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Organisation_Details">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Telephone">
+        <PropertyRef Name="Ref_Organisation_Details_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Website__Ref_Org__2116E6DF">
+    <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="1" />
+    <End Role="Website" Type="Self.Website" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Organisation_Details">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Website">
+        <PropertyRef Name="Ref_Organisation_Details_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="NHSPatientServicesModelStoreContainer">
+    <EntitySet Name="Addresses" EntityType="Self.Addresses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Email" EntityType="Self.Email" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Fax" EntityType="Self.Fax" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GP_Services" EntityType="Self.GP_Services" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Location" EntityType="Self.Location" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Lookup_GP_Services" EntityType="Self.Lookup_GP_Services" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LookUp_Parent_Table" EntityType="Self.LookUp_Parent_Table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Organisation_Details" EntityType="Self.Organisation_Details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Organisation_Type_Table" EntityType="Self.Organisation_Type_Table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Parent_Table" EntityType="Self.Parent_Table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Telephone" EntityType="Self.Telephone" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Website" EntityType="Self.Website" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Addresses__Ref_O__24E777C3" Association="Self.FK__Addresses__Ref_O__24E777C3">
+      <End Role="Organisation_Details" EntitySet="Organisation_Details" />
+      <End Role="Addresses" EntitySet="Addresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Email__Ref_Organ__1D4655FB" Association="Self.FK__Email__Ref_Organ__1D4655FB">
+      <End Role="Organisation_Details" EntitySet="Organisation_Details" />
+      <End Role="Email" EntitySet="Email" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Fax__Ref_Organis__15A53433" Association="Self.FK__Fax__Ref_Organis__15A53433">
+      <End Role="Organisation_Details" EntitySet="Organisation_Details" />
+      <End Role="Fax" EntitySet="Fax" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Location__Ref_Or__11D4A34F" Association="Self.FK__Location__Ref_Or__11D4A34F">
+      <End Role="Organisation_Details" EntitySet="Organisation_Details" />
+      <End Role="Location" EntitySet="Location" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Lookup_GP__Ref_O__084B3915" Association="Self.FK__Lookup_GP__Ref_O__084B3915">
+      <End Role="Organisation_Details" EntitySet="Organisation_Details" />
+      <End Role="Lookup_GP_Services" EntitySet="Lookup_GP_Services" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LookUp_Pa__Ref_O__0E04126B" Association="Self.FK__LookUp_Pa__Ref_O__0E04126B">
+      <End Role="Organisation_Details" EntitySet="Organisation_Details" />
+      <End Role="LookUp_Parent_Table" EntitySet="LookUp_Parent_Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LookUp_Pa__Ref_P__0D0FEE32" Association="Self.FK__LookUp_Pa__Ref_P__0D0FEE32">
+      <End Role="Parent_Table" EntitySet="Parent_Table" />
+      <End Role="LookUp_Parent_Table" EntitySet="LookUp_Parent_Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Organisat__Ref_O__019E3B86" Association="Self.FK__Organisat__Ref_O__019E3B86">
+      <End Role="Organisation_Type_Table" EntitySet="Organisation_Type_Table" />
+      <End Role="Organisation_Details" EntitySet="Organisation_Details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Telephone__Ref_O__1975C517" Association="Self.FK__Telephone__Ref_O__1975C517">
+      <End Role="Organisation_Details" EntitySet="Organisation_Details" />
+      <End Role="Telephone" EntitySet="Telephone" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Website__Ref_Org__2116E6DF" Association="Self.FK__Website__Ref_Org__2116E6DF">
+      <End Role="Organisation_Details" EntitySet="Organisation_Details" />
+      <End Role="Website" EntitySet="Website" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
