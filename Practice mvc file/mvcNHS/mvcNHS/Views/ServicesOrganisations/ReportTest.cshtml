@@ -1,0 +1,71 @@
+﻿@model mvcNHS.Models.ServiceTotals
+
+
+@{
+    ViewBag.Title = "ReportTest";
+}
+
+<select id="ddlyear">
+    <option>8</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+</select>
+
+<button id="btnCreatePieChart">Show </button>
+
+<div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+    
+@section Scripts {
+
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/js/highcharts.js")
+    @Scripts.Render("~/js/modules/exporting.js")
+
+<script type="text/javascript">
+    $(function () {
+
+        $(document).ready(function () {
+
+            // Build the chart
+            $('#container').highcharts({
+                chart: {
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+                title: {
+                    text: 'Count on clinics available in England'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: false
+                        },
+                        showInLegend: true
+                    }
+                },
+                series: [{
+                    name: 'Brands',
+                    colorByPoint: true,
+                    data: [{
+                        name: 'Total clinics Supplying Asthma Care',
+                        y: @Model.TotalServiceType1,
+
+                    }, {
+                        name: 'Child Care Total',
+                        y: @Model.TotalServiceType2,                 
+                    }]
+                }]
+            });
+        });
+    });
+    </script>
+    }
+
+

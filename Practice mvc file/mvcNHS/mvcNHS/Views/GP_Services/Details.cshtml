@@ -1,0 +1,26 @@
+﻿@model mvcNHS.DAL.GP_Services
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>GP_Services</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GP_Service_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GP_Service_Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Service_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

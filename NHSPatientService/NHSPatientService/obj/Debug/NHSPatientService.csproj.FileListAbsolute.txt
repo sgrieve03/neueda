@@ -4,3 +4,9 @@ c:\users\n_grad\documents\visual studio 2015\Projects\NHSPatientService\NHSPatie
 c:\users\n_grad\documents\visual studio 2015\Projects\NHSPatientService\NHSPatientService\obj\Debug\NHSPatientService.csprojResolveAssemblyReference.cache
 c:\users\n_grad\documents\visual studio 2015\Projects\NHSPatientService\NHSPatientService\obj\Debug\NHSPatientService.dll
 c:\users\n_grad\documents\visual studio 2015\Projects\NHSPatientService\NHSPatientService\obj\Debug\NHSPatientService.pdb
+C:\Users\N_grad\Desktop\neueda\NHSPatientService\NHSPatientService\bin\NHSPatientService.dll.config
+C:\Users\N_grad\Desktop\neueda\NHSPatientService\NHSPatientService\bin\NHSPatientService.dll
+C:\Users\N_grad\Desktop\neueda\NHSPatientService\NHSPatientService\bin\NHSPatientService.pdb
+C:\Users\N_grad\Desktop\neueda\NHSPatientService\NHSPatientService\obj\Debug\NHSPatientService.csprojResolveAssemblyReference.cache
+C:\Users\N_grad\Desktop\neueda\NHSPatientService\NHSPatientService\obj\Debug\NHSPatientService.dll
+C:\Users\N_grad\Desktop\neueda\NHSPatientService\NHSPatientService\obj\Debug\NHSPatientService.pdb
