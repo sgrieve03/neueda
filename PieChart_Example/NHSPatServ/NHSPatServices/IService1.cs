@@ -8,53 +8,87 @@ using System.Text;
 
 namespace NHSPatServices
 {
+    //these are the methods which must be included in any service contract
     [ServiceContract]
     public interface IService1
     {
-        
         [OperationContract]
-        List<PlottableObject> GetPlottableObjects(search searchQuery);
+        List<PlottableObject> GetPlottableObjects(SearchCriteria searchQuery);
         [OperationContract]
-        List<MappableObject> GetMappableObjects(search searchQuery);
+        List<MappableObject> GetMappableObjects(SearchCriteria searchQuery);
     }//end service
 
+    //the following data contracts, data members and enum members are available 
+    //to anyone who enters a contract with this service
     [DataContract]
     public class PlottableObject
     {
         [DataMember]
         public string Ref_ID { get; set; }
         [DataMember]
-        public int Value { get; set; }
+        public double Value { get; set; }
 
-
-        public PlottableObject(string value, int average)
+        public PlottableObject(string value, double average)
         {
             Ref_ID = value;
             Value = average;
         }
     }//end plottableObject
     [DataContract]
-    public class disease
+    public class Disease
     {
         [DataMember]
-    public string Name { get; set; }
+        public string Name { get; set; }
         [DataMember]
-    public diseaseEnum Code { get; set; } 
+        public diseaseEnum Code { get; set; } 
 
-    public disease(string name)
-    {
-        this.Name = name;
-        this.Code = diseaseEnum.AST;
-    }
-    public disease(string name, diseaseEnum code)
-    {
+        public Disease(string name)
+        {
+            this.Name = name;
+            this.Code = diseaseEnum.AST;
+        }
+        public Disease(string name, diseaseEnum code)
+        {
             this.Name = name;
             this.Code = code;
-    }
+        }
+    }//end disease
 
-    }
     [DataContract]
-    public enum search
+    public class MappableObject
+    {
+        [DataMember]
+        public double Longitude { get; set; }
+        [DataMember]
+        public double Latitude { get; set; }
+        [DataMember]
+        public string Information {
+            get {
+                return Information; }
+            set {
+                Information = Information + value; } }
+
+        public MappableObject(string information, double latitude,double longitude)
+        {
+            this.Longitude = longitude;
+            this.Latitude = latitude;
+            this.Information = information;
+        }
+    }//end mappableObject
+
+    [DataContract]
+    public class SearchCriteria
+    {
+        [DataMember]
+        public string gp;
+        [DataMember]
+        public Disease disease { get; set; }
+        [DataMember]
+        public Search search { get; set; }
+    }//end search criteria
+
+    [DataContract]
+    public enum Search
     {
         [EnumMember]
         AverageAllDiseaseInEngland,
@@ -101,17 +135,16 @@ namespace NHSPatServices
         [EnumMember]
         AverageRatingInTrust,
         [EnumMember]
-        TotalRatingInGP
-
+        TotalRatingInGP,
     }//end search
+
     [DataContract]
     public enum diseaseEnum
     {
-
         [EnumMember]
         AST,
         [EnumMember]
-        Chronic,
+        COPD,
         [EnumMember]
         THY,
         [EnumMember]
@@ -145,7 +178,7 @@ namespace NHSPatServices
         [EnumMember]
         STIA,
         [EnumMember]
-        PA,
+        PC,
         [EnumMember]
         MH,
         [EnumMember]
@@ -154,23 +187,6 @@ namespace NHSPatServices
         OB,
         [EnumMember]
         CVDPP
-
     }//end disease
-    [DataContract]
-    public class MappableObject
-    {
-        [DataMember]
-        double Longitude { get; set; }
-        [DataMember]
-        double Latitude { get; set; }
-        [DataMember]
-        string info { get; set; }
 
-        public MappableObject(double Longitude, double Latitude, string info)
-        {
-            this.Longitude = Longitude;
-            this.Latitude =  Latitude;
-            this.info = info;
-        }
-    }
 }//end class

@@ -52,112 +52,146 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Address.cs">
-      <DependentUpon>NHSPatServModel.tt</DependentUpon>
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Email.cs">
-      <DependentUpon>NHSPatServModel.tt</DependentUpon>
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Fax.cs">
-      <DependentUpon>NHSPatServModel.tt</DependentUpon>
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="GP_Disease_Prevalence.cs">
-      <DependentUpon>NHSPatServModel.tt</DependentUpon>
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="GP_Practice_Code.cs">
-      <DependentUpon>NHSPatServModel.tt</DependentUpon>
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="GP_Ratings.cs">
-      <DependentUpon>NHSPatServModel.tt</DependentUpon>
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="GP_Services.cs">
-      <DependentUpon>NHSPatServModel.tt</DependentUpon>
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="GP_Staff.cs">
-      <DependentUpon>NHSPatServModel.tt</DependentUpon>
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="GP_Total_Numbers.cs">
-      <DependentUpon>NHSPatServModel.tt</DependentUpon>
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Location.cs">
-      <DependentUpon>NHSPatServModel.tt</DependentUpon>
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="NHSPatServModel.Context.cs">
+    <Compile Include="NHSPatientServicesModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>NHSPatServModel.Context.tt</DependentUpon>
+      <DependentUpon>NHSPatientServicesModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="NHSPatServModel.cs">
+    <Compile Include="NHSPatientServicesModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>NHSPatServModel.tt</DependentUpon>
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="NHSPatServModel.Designer.cs">
+    <Compile Include="NHSPatientServicesModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>NHSPatServModel.edmx</DependentUpon>
+      <DependentUpon>NHSPatientServicesModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Organisation_Details.cs">
-      <DependentUpon>NHSPatServModel.tt</DependentUpon>
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Organisation_Type.cs">
-      <DependentUpon>NHSPatServModel.tt</DependentUpon>
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Parent.cs">
-      <DependentUpon>NHSPatServModel.tt</DependentUpon>
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ParentOrganisation.cs">
-      <DependentUpon>NHSPatServModel.tt</DependentUpon>
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServicesOrganisation.cs">
-      <DependentUpon>NHSPatServModel.tt</DependentUpon>
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="sp_All_England_Disease_Avg_Result.cs">
-      <DependentUpon>NHSPatServModel.tt</DependentUpon>
+    <Compile Include="sp_AverageAllDiseaseInEngland_Result.cs">
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="SP_Asthma_Count_GP_Result.cs">
-      <DependentUpon>NHSPatServModel.tt</DependentUpon>
+    <Compile Include="sp_AverageAllDiseaseInNHSTrust_Result.cs">
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="sp_Specified_England_Disease_Avg_Result.cs">
-      <DependentUpon>NHSPatServModel.tt</DependentUpon>
+    <Compile Include="sp_AverageRatingInEngland_Result.cs">
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>NHSPatServModel.tt</DependentUpon>
+    <Compile Include="sp_AverageRatingInTrust_Result.cs">
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_AverageSpecificDiseaseInEngland_Result.cs">
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_diseasesInNhsTrust_Result.cs">
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_MaxAllDiseaseInEngland_Result.cs">
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_MaxAllDiseaseInNHSTrust_Result.cs">
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_MaxSpecificDiseaseInNHSTrust_Result.cs">
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_MinAllDiseaseInEngland_Result.cs">
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_MinAllDiseaseInNHSTrust_Result.cs">
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_plot_Result.cs">
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_TotalAllDiseaseInSpecificGP_Result.cs">
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_TotalRatingInGP_Result.cs">
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_TotalSpecificDiseaseInGP_Result.cs">
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_TotalStaffInSpecificGP_Result.cs">
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Telephone.cs">
-      <DependentUpon>NHSPatServModel.tt</DependentUpon>
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Website.cs">
-      <DependentUpon>NHSPatServModel.tt</DependentUpon>
+      <DependentUpon>NHSPatientServicesModel.tt</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="NHSPatServModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>NHSPatServModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <None Include="NHSPatServModel.edmx.diagram">
-      <DependentUpon>NHSPatServModel.edmx</DependentUpon>
+    <EntityDeploy Include="NHSPatientServicesModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NHSPatientServicesModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="NHSPatientServicesModel.edmx.diagram">
+      <DependentUpon>NHSPatientServicesModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="NHSPatServModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>NHSPatServModel.edmx</DependentUpon>
-      <LastGenOutput>NHSPatServModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="NHSPatServModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>NHSPatServModel.edmx</DependentUpon>
-      <LastGenOutput>NHSPatServModel.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="NHSPatientServicesModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NHSPatientServicesModel.edmx</DependentUpon>
+      <LastGenOutput>NHSPatientServicesModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="NHSPatientServicesModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NHSPatientServicesModel.edmx</DependentUpon>
+      <LastGenOutput>NHSPatientServicesModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

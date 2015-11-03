@@ -101,12 +101,12 @@
         <EntityType Name="Location">
           <Key>
             <PropertyRef Name="Ref_Organisation_Details_ID" />
-            <PropertyRef Name="Longtitude" />
             <PropertyRef Name="Latitude" />
+            <PropertyRef Name="Longtitude" />
           </Key>
           <Property Name="Ref_Organisation_Details_ID" Type="int" Nullable="false" />
-          <Property Name="Longtitude" Type="float" Nullable="false" />
           <Property Name="Latitude" Type="float" Nullable="false" />
+          <Property Name="Longtitude" Type="float" Nullable="false" />
         </EntityType>
         <EntityType Name="Organisation_Details">
           <Key>
@@ -150,16 +150,6 @@
           <Property Name="Ref_Organisation_Details_ID" Type="int" Nullable="false" />
           <Property Name="Ref_Service_ID" Type="int" Nullable="false" />
         </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
-        </EntityType>
         <EntityType Name="Telephone">
           <Key>
             <PropertyRef Name="Ref_Organisation_Details_ID" />
@@ -176,7 +166,7 @@
           <Property Name="Ref_Organisation_Details_ID" Type="int" Nullable="false" />
           <Property Name="Website" Type="char" MaxLength="255" Nullable="false" />
         </EntityType>
-        <Association Name="FK__Addresses__Ref_O__1B48FEF0">
+        <Association Name="FK__Addresses__Ref_O__1CFC3D38">
           <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="1" />
           <End Role="Addresses" Type="Self.Addresses" Multiplicity="0..1" />
           <ReferentialConstraint>
@@ -188,7 +178,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Email__Ref_Organ__13A7DD28">
+        <Association Name="FK__Email__Ref_Organ__155B1B70">
           <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="1" />
           <End Role="Email" Type="Self.Email" Multiplicity="*" />
           <ReferentialConstraint>
@@ -200,7 +190,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Fax__Ref_Organis__0C06BB60">
+        <Association Name="FK__Fax__Ref_Organis__0DB9F9A8">
           <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="1" />
           <End Role="Fax" Type="Self.Fax" Multiplicity="*" />
           <ReferentialConstraint>
@@ -212,7 +202,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__GP_Disease__Ref___27AED5D5">
+        <Association Name="FK__GP_Disease__Ref___2962141D">
           <End Role="GP_Practice_Code" Type="Self.GP_Practice_Code" Multiplicity="0..1" />
           <End Role="GP_Disease_Prevalence" Type="Self.GP_Disease_Prevalence" Multiplicity="*" />
           <ReferentialConstraint>
@@ -224,7 +214,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__GP_Practi__Ref_O__200DB40D">
+        <Association Name="FK__GP_Practi__Ref_O__25918339">
           <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="1" />
           <End Role="GP_Practice_Code" Type="Self.GP_Practice_Code" Multiplicity="*" />
           <ReferentialConstraint>
@@ -236,7 +226,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__GP_Ratings__Ref___2F4FF79D">
+        <Association Name="FK__GP_Ratings__Ref___310335E5">
           <End Role="GP_Practice_Code" Type="Self.GP_Practice_Code" Multiplicity="0..1" />
           <End Role="GP_Ratings" Type="Self.GP_Ratings" Multiplicity="*" />
           <ReferentialConstraint>
@@ -248,7 +238,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__GP_Staff__Ref_Or__23DE44F1">
+        <Association Name="FK__GP_Staff__Ref_Or__20CCCE1C">
           <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="0..1" />
           <End Role="GP_Staff" Type="Self.GP_Staff" Multiplicity="*" />
           <ReferentialConstraint>
@@ -260,7 +250,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__GP_Total_N__Ref___2B7F66B9">
+        <Association Name="FK__GP_Total_N__Ref___2D32A501">
           <End Role="GP_Practice_Code" Type="Self.GP_Practice_Code" Multiplicity="0..1" />
           <End Role="GP_Total_Numbers" Type="Self.GP_Total_Numbers" Multiplicity="*" />
           <ReferentialConstraint>
@@ -272,7 +262,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Location__Ref_Or__08362A7C">
+        <Association Name="FK__Location__Ref_Or__09E968C4">
           <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="1" />
           <End Role="Location" Type="Self.Location" Multiplicity="*" />
           <ReferentialConstraint>
@@ -284,7 +274,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Organisat__Ref_O__77FFC2B3">
+        <Association Name="FK__Organisat__Ref_O__79B300FB">
           <End Role="Organisation_Type" Type="Self.Organisation_Type" Multiplicity="1" />
           <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="*" />
           <ReferentialConstraint>
@@ -296,7 +286,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ParentOrg__Ref_O__04659998">
+        <Association Name="FK__ParentOrg__Ref_O__0618D7E0">
           <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="0..1" />
           <End Role="ParentOrganisation" Type="Self.ParentOrganisation" Multiplicity="*" />
           <ReferentialConstraint>
@@ -308,7 +298,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ParentOrg__Ref_P__0371755F">
+        <Association Name="FK__ParentOrg__Ref_P__0524B3A7">
           <End Role="Parent" Type="Self.Parent" Multiplicity="0..1" />
           <End Role="ParentOrganisation" Type="Self.ParentOrganisation" Multiplicity="*" />
           <ReferentialConstraint>
@@ -320,7 +310,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ServicesO__Ref_O__7EACC042">
+        <Association Name="FK__ServicesO__Ref_O__005FFE8A">
           <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="1" />
           <End Role="ServicesOrganisation" Type="Self.ServicesOrganisation" Multiplicity="*" />
           <ReferentialConstraint>
@@ -332,7 +322,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ServicesO__Ref_S__7DB89C09">
+        <Association Name="FK__ServicesO__Ref_S__7F6BDA51">
           <End Role="GP_Services" Type="Self.GP_Services" Multiplicity="1" />
           <End Role="ServicesOrganisation" Type="Self.ServicesOrganisation" Multiplicity="*" />
           <ReferentialConstraint>
@@ -344,7 +334,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Telephone__Ref_O__0FD74C44">
+        <Association Name="FK__Telephone__Ref_O__118A8A8C">
           <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="1" />
           <End Role="Telephone" Type="Self.Telephone" Multiplicity="*" />
           <ReferentialConstraint>
@@ -356,7 +346,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Website__Ref_Org__17786E0C">
+        <Association Name="FK__Website__Ref_Org__192BAC54">
           <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="1" />
           <End Role="Website" Type="Self.Website" Multiplicity="*" />
           <ReferentialConstraint>
@@ -369,29 +359,43 @@
           </ReferentialConstraint>
         </Association>
         <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
-        <Function Name="sp_All_England_Disease_Avg" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
           <Parameter Name="owner_id" Type="int" Mode="In" />
           <Parameter Name="version" Type="int" Mode="In" />
           <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
         </Function>
+        <Function Name="sp_AverageAllDiseaseInEngland" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="sp_AverageAllDiseaseInNHSTrust" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="organisationCode" Type="char" Mode="In" />
+        </Function>
+        <Function Name="sp_AveragePatientInEngland" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_AveragePatientInNHSTrust" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PracticeCode" Type="char" Mode="In" />
         </Function>
         <Function Name="sp_AverageRatingInEngland" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="sp_AverageRatingInTrust" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="organisationCode" Type="char" Mode="In" />
         </Function>
+        <Function Name="sp_AverageSpecificDiseaseInEngland" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ref" Type="char" Mode="In" />
+        </Function>
         <Function Name="sp_AverageSpecificDiseaseInNHSTrust" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="organisationCode" Type="char" Mode="In" />
           <Parameter Name="indicator_group" Type="char" Mode="In" />
+        </Function>
+        <Function Name="sp_AverageStaffInEngland" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_AverageStaffInNHSTrust" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PracticeCode" Type="char" Mode="In" />
         </Function>
         <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
           <Parameter Name="owner_id" Type="int" Mode="In" />
           <Parameter Name="version" Type="int" Mode="In" />
           <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_diseasesInNhsTrust" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Indicator_Group" Type="char" Mode="In" />
         </Function>
         <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
@@ -436,11 +440,11 @@
           <Parameter Name="owner_id" Type="int" Mode="In" />
           <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
         </Function>
-        <Function Name="sp_Specified_England_Disease_Avg" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="ref" Type="char" Mode="In" />
-        </Function>
-        <Function Name="sp_TotalAllDiseaseInSpecificGp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+        <Function Name="sp_TotalAllDiseaseInSpecificGP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="organisationCode" Type="char" Mode="In" />
+        </Function>
+        <Function Name="sp_TotalPatientInSpecificGP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PracticeCode" Type="char" Mode="In" />
         </Function>
         <Function Name="sp_TotalRatingInGP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="organisationCode" Type="char" Mode="In" />
@@ -469,70 +473,69 @@
           <EntitySet Name="Parent" EntityType="Self.Parent" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ParentOrganisation" EntityType="Self.ParentOrganisation" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ServicesOrganisation" EntityType="Self.ServicesOrganisation" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Telephone" EntityType="Self.Telephone" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Website" EntityType="Self.Website" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Addresses__Ref_O__1B48FEF0" Association="Self.FK__Addresses__Ref_O__1B48FEF0">
+          <AssociationSet Name="FK__Addresses__Ref_O__1CFC3D38" Association="Self.FK__Addresses__Ref_O__1CFC3D38">
             <End Role="Organisation_Details" EntitySet="Organisation_Details" />
             <End Role="Addresses" EntitySet="Addresses" />
           </AssociationSet>
-          <AssociationSet Name="FK__Email__Ref_Organ__13A7DD28" Association="Self.FK__Email__Ref_Organ__13A7DD28">
+          <AssociationSet Name="FK__Email__Ref_Organ__155B1B70" Association="Self.FK__Email__Ref_Organ__155B1B70">
             <End Role="Organisation_Details" EntitySet="Organisation_Details" />
             <End Role="Email" EntitySet="Email" />
           </AssociationSet>
-          <AssociationSet Name="FK__Fax__Ref_Organis__0C06BB60" Association="Self.FK__Fax__Ref_Organis__0C06BB60">
+          <AssociationSet Name="FK__Fax__Ref_Organis__0DB9F9A8" Association="Self.FK__Fax__Ref_Organis__0DB9F9A8">
             <End Role="Organisation_Details" EntitySet="Organisation_Details" />
             <End Role="Fax" EntitySet="Fax" />
           </AssociationSet>
-          <AssociationSet Name="FK__GP_Disease__Ref___27AED5D5" Association="Self.FK__GP_Disease__Ref___27AED5D5">
+          <AssociationSet Name="FK__GP_Disease__Ref___2962141D" Association="Self.FK__GP_Disease__Ref___2962141D">
             <End Role="GP_Practice_Code" EntitySet="GP_Practice_Code" />
             <End Role="GP_Disease_Prevalence" EntitySet="GP_Disease_Prevalence" />
           </AssociationSet>
-          <AssociationSet Name="FK__GP_Practi__Ref_O__200DB40D" Association="Self.FK__GP_Practi__Ref_O__200DB40D">
+          <AssociationSet Name="FK__GP_Practi__Ref_O__25918339" Association="Self.FK__GP_Practi__Ref_O__25918339">
             <End Role="Organisation_Details" EntitySet="Organisation_Details" />
             <End Role="GP_Practice_Code" EntitySet="GP_Practice_Code" />
           </AssociationSet>
-          <AssociationSet Name="FK__GP_Ratings__Ref___2F4FF79D" Association="Self.FK__GP_Ratings__Ref___2F4FF79D">
+          <AssociationSet Name="FK__GP_Ratings__Ref___310335E5" Association="Self.FK__GP_Ratings__Ref___310335E5">
             <End Role="GP_Practice_Code" EntitySet="GP_Practice_Code" />
             <End Role="GP_Ratings" EntitySet="GP_Ratings" />
           </AssociationSet>
-          <AssociationSet Name="FK__GP_Staff__Ref_Or__23DE44F1" Association="Self.FK__GP_Staff__Ref_Or__23DE44F1">
+          <AssociationSet Name="FK__GP_Staff__Ref_Or__20CCCE1C" Association="Self.FK__GP_Staff__Ref_Or__20CCCE1C">
             <End Role="Organisation_Details" EntitySet="Organisation_Details" />
             <End Role="GP_Staff" EntitySet="GP_Staff" />
           </AssociationSet>
-          <AssociationSet Name="FK__GP_Total_N__Ref___2B7F66B9" Association="Self.FK__GP_Total_N__Ref___2B7F66B9">
+          <AssociationSet Name="FK__GP_Total_N__Ref___2D32A501" Association="Self.FK__GP_Total_N__Ref___2D32A501">
             <End Role="GP_Practice_Code" EntitySet="GP_Practice_Code" />
             <End Role="GP_Total_Numbers" EntitySet="GP_Total_Numbers" />
           </AssociationSet>
-          <AssociationSet Name="FK__Location__Ref_Or__08362A7C" Association="Self.FK__Location__Ref_Or__08362A7C">
+          <AssociationSet Name="FK__Location__Ref_Or__09E968C4" Association="Self.FK__Location__Ref_Or__09E968C4">
             <End Role="Organisation_Details" EntitySet="Organisation_Details" />
             <End Role="Location" EntitySet="Location" />
           </AssociationSet>
-          <AssociationSet Name="FK__Organisat__Ref_O__77FFC2B3" Association="Self.FK__Organisat__Ref_O__77FFC2B3">
+          <AssociationSet Name="FK__Organisat__Ref_O__79B300FB" Association="Self.FK__Organisat__Ref_O__79B300FB">
             <End Role="Organisation_Type" EntitySet="Organisation_Type" />
             <End Role="Organisation_Details" EntitySet="Organisation_Details" />
           </AssociationSet>
-          <AssociationSet Name="FK__ParentOrg__Ref_O__04659998" Association="Self.FK__ParentOrg__Ref_O__04659998">
+          <AssociationSet Name="FK__ParentOrg__Ref_O__0618D7E0" Association="Self.FK__ParentOrg__Ref_O__0618D7E0">
             <End Role="Organisation_Details" EntitySet="Organisation_Details" />
             <End Role="ParentOrganisation" EntitySet="ParentOrganisation" />
           </AssociationSet>
-          <AssociationSet Name="FK__ParentOrg__Ref_P__0371755F" Association="Self.FK__ParentOrg__Ref_P__0371755F">
+          <AssociationSet Name="FK__ParentOrg__Ref_P__0524B3A7" Association="Self.FK__ParentOrg__Ref_P__0524B3A7">
             <End Role="Parent" EntitySet="Parent" />
             <End Role="ParentOrganisation" EntitySet="ParentOrganisation" />
           </AssociationSet>
-          <AssociationSet Name="FK__ServicesO__Ref_O__7EACC042" Association="Self.FK__ServicesO__Ref_O__7EACC042">
+          <AssociationSet Name="FK__ServicesO__Ref_O__005FFE8A" Association="Self.FK__ServicesO__Ref_O__005FFE8A">
             <End Role="Organisation_Details" EntitySet="Organisation_Details" />
             <End Role="ServicesOrganisation" EntitySet="ServicesOrganisation" />
           </AssociationSet>
-          <AssociationSet Name="FK__ServicesO__Ref_S__7DB89C09" Association="Self.FK__ServicesO__Ref_S__7DB89C09">
+          <AssociationSet Name="FK__ServicesO__Ref_S__7F6BDA51" Association="Self.FK__ServicesO__Ref_S__7F6BDA51">
             <End Role="GP_Services" EntitySet="GP_Services" />
             <End Role="ServicesOrganisation" EntitySet="ServicesOrganisation" />
           </AssociationSet>
-          <AssociationSet Name="FK__Telephone__Ref_O__0FD74C44" Association="Self.FK__Telephone__Ref_O__0FD74C44">
+          <AssociationSet Name="FK__Telephone__Ref_O__118A8A8C" Association="Self.FK__Telephone__Ref_O__118A8A8C">
             <End Role="Organisation_Details" EntitySet="Organisation_Details" />
             <End Role="Telephone" EntitySet="Telephone" />
           </AssociationSet>
-          <AssociationSet Name="FK__Website__Ref_Org__17786E0C" Association="Self.FK__Website__Ref_Org__17786E0C">
+          <AssociationSet Name="FK__Website__Ref_Org__192BAC54" Association="Self.FK__Website__Ref_Org__192BAC54">
             <End Role="Organisation_Details" EntitySet="Organisation_Details" />
             <End Role="Website" EntitySet="Website" />
           </AssociationSet>
@@ -553,7 +556,7 @@
           <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="County" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Postcode" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Organisation_Details" Relationship="Self.FK__Addresses__Ref_O__1B48FEF0" FromRole="Addresses" ToRole="Organisation_Details" />
+          <NavigationProperty Name="Organisation_Details" Relationship="Self.FK__Addresses__Ref_O__1CFC3D38" FromRole="Addresses" ToRole="Organisation_Details" />
         </EntityType>
         <EntityType Name="Email">
           <Key>
@@ -562,7 +565,7 @@
           </Key>
           <Property Name="Ref_Organisation_Details_ID" Type="Int32" Nullable="false" />
           <Property Name="Email1" Type="String" MaxLength="255" FixedLength="true" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Organisation_Details" Relationship="Self.FK__Email__Ref_Organ__13A7DD28" FromRole="Email" ToRole="Organisation_Details" />
+          <NavigationProperty Name="Organisation_Details" Relationship="Self.FK__Email__Ref_Organ__155B1B70" FromRole="Email" ToRole="Organisation_Details" />
         </EntityType>
         <EntityType Name="Fax">
           <Key>
@@ -571,7 +574,7 @@
           </Key>
           <Property Name="Ref_Organisation_Details_ID" Type="Int32" Nullable="false" />
           <Property Name="Fax_Number" Type="String" MaxLength="255" FixedLength="true" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Organisation_Details" Relationship="Self.FK__Fax__Ref_Organis__0C06BB60" FromRole="Fax" ToRole="Organisation_Details" />
+          <NavigationProperty Name="Organisation_Details" Relationship="Self.FK__Fax__Ref_Organis__0DB9F9A8" FromRole="Fax" ToRole="Organisation_Details" />
         </EntityType>
         <EntityType Name="GP_Disease_Prevalence">
           <Key>
@@ -582,7 +585,7 @@
           <Property Name="Indicator_Group" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
           <Property Name="Disease_Name" Type="String" MaxLength="255" FixedLength="true" Unicode="false" />
           <Property Name="Number_of_cases" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="GP_Practice_Code" Relationship="Self.FK__GP_Disease__Ref___27AED5D5" FromRole="GP_Disease_Prevalence" ToRole="GP_Practice_Code" />
+          <NavigationProperty Name="GP_Practice_Code" Relationship="Self.FK__GP_Disease__Ref___2962141D" FromRole="GP_Disease_Prevalence" ToRole="GP_Practice_Code" />
         </EntityType>
         <EntityType Name="GP_Practice_Code">
           <Key>
@@ -591,10 +594,10 @@
           <Property Name="GP_Practice_CodeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="OrganisationCode" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
           <Property Name="Ref_Organisation_Details_ID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="GP_Disease_Prevalence" Relationship="Self.FK__GP_Disease__Ref___27AED5D5" FromRole="GP_Practice_Code" ToRole="GP_Disease_Prevalence" />
-          <NavigationProperty Name="Organisation_Details" Relationship="Self.FK__GP_Practi__Ref_O__200DB40D" FromRole="GP_Practice_Code" ToRole="Organisation_Details" />
-          <NavigationProperty Name="GP_Ratings" Relationship="Self.FK__GP_Ratings__Ref___2F4FF79D" FromRole="GP_Practice_Code" ToRole="GP_Ratings" />
-          <NavigationProperty Name="GP_Total_Numbers" Relationship="Self.FK__GP_Total_N__Ref___2B7F66B9" FromRole="GP_Practice_Code" ToRole="GP_Total_Numbers" />
+          <NavigationProperty Name="GP_Disease_Prevalence" Relationship="Self.FK__GP_Disease__Ref___2962141D" FromRole="GP_Practice_Code" ToRole="GP_Disease_Prevalence" />
+          <NavigationProperty Name="Organisation_Details" Relationship="Self.FK__GP_Practi__Ref_O__25918339" FromRole="GP_Practice_Code" ToRole="Organisation_Details" />
+          <NavigationProperty Name="GP_Ratings" Relationship="Self.FK__GP_Ratings__Ref___310335E5" FromRole="GP_Practice_Code" ToRole="GP_Ratings" />
+          <NavigationProperty Name="GP_Total_Numbers" Relationship="Self.FK__GP_Total_N__Ref___2D32A501" FromRole="GP_Practice_Code" ToRole="GP_Total_Numbers" />
         </EntityType>
         <EntityType Name="GP_Ratings">
           <Key>
@@ -618,7 +621,7 @@
           <Property Name="Q29_Probably_Not" Type="Double" />
           <Property Name="Q29_Definitely_Not" Type="Double" />
           <Property Name="Q29_Dont_Know" Type="Double" />
-          <NavigationProperty Name="GP_Practice_Code" Relationship="Self.FK__GP_Ratings__Ref___2F4FF79D" FromRole="GP_Ratings" ToRole="GP_Practice_Code" />
+          <NavigationProperty Name="GP_Practice_Code" Relationship="Self.FK__GP_Ratings__Ref___310335E5" FromRole="GP_Ratings" ToRole="GP_Practice_Code" />
         </EntityType>
         <EntityType Name="GP_Services">
           <Key>
@@ -626,7 +629,7 @@
           </Key>
           <Property Name="Service_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="GP_Service_Name" Type="String" MaxLength="255" FixedLength="true" Unicode="false" />
-          <NavigationProperty Name="ServicesOrganisations" Relationship="Self.FK__ServicesO__Ref_S__7DB89C09" FromRole="GP_Services" ToRole="ServicesOrganisation" />
+          <NavigationProperty Name="ServicesOrganisations" Relationship="Self.FK__ServicesO__Ref_S__7F6BDA51" FromRole="GP_Services" ToRole="ServicesOrganisation" />
         </EntityType>
         <EntityType Name="GP_Staff">
           <Key>
@@ -635,7 +638,7 @@
           <Property Name="GP_StaffID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Ref_Organisation_Details_ID" Type="Int32" />
           <Property Name="Job_Title" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
-          <NavigationProperty Name="Organisation_Details" Relationship="Self.FK__GP_Staff__Ref_Or__23DE44F1" FromRole="GP_Staff" ToRole="Organisation_Details" />
+          <NavigationProperty Name="Organisation_Details" Relationship="Self.FK__GP_Staff__Ref_Or__20CCCE1C" FromRole="GP_Staff" ToRole="Organisation_Details" />
         </EntityType>
         <EntityType Name="GP_Total_Numbers">
           <Key>
@@ -645,18 +648,18 @@
           <Property Name="Ref_" Type="Int32" />
           <Property Name="Total_Male" Type="Int32" Nullable="false" />
           <Property Name="Total_Female" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="GP_Practice_Code" Relationship="Self.FK__GP_Total_N__Ref___2B7F66B9" FromRole="GP_Total_Numbers" ToRole="GP_Practice_Code" />
+          <NavigationProperty Name="GP_Practice_Code" Relationship="Self.FK__GP_Total_N__Ref___2D32A501" FromRole="GP_Total_Numbers" ToRole="GP_Practice_Code" />
         </EntityType>
         <EntityType Name="Location">
           <Key>
             <PropertyRef Name="Ref_Organisation_Details_ID" />
-            <PropertyRef Name="Longtitude" />
             <PropertyRef Name="Latitude" />
+            <PropertyRef Name="Longtitude" />
           </Key>
           <Property Name="Ref_Organisation_Details_ID" Type="Int32" Nullable="false" />
-          <Property Name="Longtitude" Type="Double" Nullable="false" />
           <Property Name="Latitude" Type="Double" Nullable="false" />
-          <NavigationProperty Name="Organisation_Details" Relationship="Self.FK__Location__Ref_Or__08362A7C" FromRole="Location" ToRole="Organisation_Details" />
+          <Property Name="Longtitude" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Organisation_Details" Relationship="Self.FK__Location__Ref_Or__09E968C4" FromRole="Location" ToRole="Organisation_Details" />
         </EntityType>
         <EntityType Name="Organisation_Details">
           <Key>
@@ -668,17 +671,17 @@
           <Property Name="Organisation_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Ref_Organisation_Type_ID" Type="Int32" Nullable="false" />
           <Property Name="EPS_Enabled" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Address" Relationship="Self.FK__Addresses__Ref_O__1B48FEF0" FromRole="Organisation_Details" ToRole="Addresses" />
-          <NavigationProperty Name="Emails" Relationship="Self.FK__Email__Ref_Organ__13A7DD28" FromRole="Organisation_Details" ToRole="Email" />
-          <NavigationProperty Name="Faxes" Relationship="Self.FK__Fax__Ref_Organis__0C06BB60" FromRole="Organisation_Details" ToRole="Fax" />
-          <NavigationProperty Name="GP_Practice_Code" Relationship="Self.FK__GP_Practi__Ref_O__200DB40D" FromRole="Organisation_Details" ToRole="GP_Practice_Code" />
-          <NavigationProperty Name="GP_Staff" Relationship="Self.FK__GP_Staff__Ref_Or__23DE44F1" FromRole="Organisation_Details" ToRole="GP_Staff" />
-          <NavigationProperty Name="Locations" Relationship="Self.FK__Location__Ref_Or__08362A7C" FromRole="Organisation_Details" ToRole="Location" />
-          <NavigationProperty Name="Organisation_Type" Relationship="Self.FK__Organisat__Ref_O__77FFC2B3" FromRole="Organisation_Details" ToRole="Organisation_Type" />
-          <NavigationProperty Name="ParentOrganisations" Relationship="Self.FK__ParentOrg__Ref_O__04659998" FromRole="Organisation_Details" ToRole="ParentOrganisation" />
-          <NavigationProperty Name="ServicesOrganisations" Relationship="Self.FK__ServicesO__Ref_O__7EACC042" FromRole="Organisation_Details" ToRole="ServicesOrganisation" />
-          <NavigationProperty Name="Telephones" Relationship="Self.FK__Telephone__Ref_O__0FD74C44" FromRole="Organisation_Details" ToRole="Telephone" />
-          <NavigationProperty Name="Websites" Relationship="Self.FK__Website__Ref_Org__17786E0C" FromRole="Organisation_Details" ToRole="Website" />
+          <NavigationProperty Name="Address" Relationship="Self.FK__Addresses__Ref_O__1CFC3D38" FromRole="Organisation_Details" ToRole="Addresses" />
+          <NavigationProperty Name="Emails" Relationship="Self.FK__Email__Ref_Organ__155B1B70" FromRole="Organisation_Details" ToRole="Email" />
+          <NavigationProperty Name="Faxes" Relationship="Self.FK__Fax__Ref_Organis__0DB9F9A8" FromRole="Organisation_Details" ToRole="Fax" />
+          <NavigationProperty Name="GP_Practice_Code" Relationship="Self.FK__GP_Practi__Ref_O__25918339" FromRole="Organisation_Details" ToRole="GP_Practice_Code" />
+          <NavigationProperty Name="GP_Staff" Relationship="Self.FK__GP_Staff__Ref_Or__20CCCE1C" FromRole="Organisation_Details" ToRole="GP_Staff" />
+          <NavigationProperty Name="Locations" Relationship="Self.FK__Location__Ref_Or__09E968C4" FromRole="Organisation_Details" ToRole="Location" />
+          <NavigationProperty Name="Organisation_Type" Relationship="Self.FK__Organisat__Ref_O__79B300FB" FromRole="Organisation_Details" ToRole="Organisation_Type" />
+          <NavigationProperty Name="ParentOrganisations" Relationship="Self.FK__ParentOrg__Ref_O__0618D7E0" FromRole="Organisation_Details" ToRole="ParentOrganisation" />
+          <NavigationProperty Name="ServicesOrganisations" Relationship="Self.FK__ServicesO__Ref_O__005FFE8A" FromRole="Organisation_Details" ToRole="ServicesOrganisation" />
+          <NavigationProperty Name="Telephones" Relationship="Self.FK__Telephone__Ref_O__118A8A8C" FromRole="Organisation_Details" ToRole="Telephone" />
+          <NavigationProperty Name="Websites" Relationship="Self.FK__Website__Ref_Org__192BAC54" FromRole="Organisation_Details" ToRole="Website" />
         </EntityType>
         <EntityType Name="Organisation_Type">
           <Key>
@@ -686,7 +689,7 @@
           </Key>
           <Property Name="Organisation_Type_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Organisation_Type1" Type="String" MaxLength="25" FixedLength="true" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Organisation_Details" Relationship="Self.FK__Organisat__Ref_O__77FFC2B3" FromRole="Organisation_Type" ToRole="Organisation_Details" />
+          <NavigationProperty Name="Organisation_Details" Relationship="Self.FK__Organisat__Ref_O__79B300FB" FromRole="Organisation_Type" ToRole="Organisation_Details" />
         </EntityType>
         <EntityType Name="Parent">
           <Key>
@@ -695,7 +698,7 @@
           <Property Name="Parent_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ODSCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Parent_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="ParentOrganisations" Relationship="Self.FK__ParentOrg__Ref_P__0371755F" FromRole="Parent" ToRole="ParentOrganisation" />
+          <NavigationProperty Name="ParentOrganisations" Relationship="Self.FK__ParentOrg__Ref_P__0524B3A7" FromRole="Parent" ToRole="ParentOrganisation" />
         </EntityType>
         <EntityType Name="ParentOrganisation">
           <Key>
@@ -704,8 +707,8 @@
           <Property Name="ParentOrganisationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Ref_Organisation_Details_ID" Type="Int32" />
           <Property Name="Ref_Parent_ID" Type="Int32" />
-          <NavigationProperty Name="Organisation_Details" Relationship="Self.FK__ParentOrg__Ref_O__04659998" FromRole="ParentOrganisation" ToRole="Organisation_Details" />
-          <NavigationProperty Name="Parent" Relationship="Self.FK__ParentOrg__Ref_P__0371755F" FromRole="ParentOrganisation" ToRole="Parent" />
+          <NavigationProperty Name="Organisation_Details" Relationship="Self.FK__ParentOrg__Ref_O__0618D7E0" FromRole="ParentOrganisation" ToRole="Organisation_Details" />
+          <NavigationProperty Name="Parent" Relationship="Self.FK__ParentOrg__Ref_P__0524B3A7" FromRole="ParentOrganisation" ToRole="Parent" />
         </EntityType>
         <EntityType Name="ServicesOrganisation">
           <Key>
@@ -714,18 +717,8 @@
           <Property Name="ServiceOrganisationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Ref_Organisation_Details_ID" Type="Int32" Nullable="false" />
           <Property Name="Ref_Service_ID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="GP_Services" Relationship="Self.FK__ServicesO__Ref_S__7DB89C09" FromRole="ServicesOrganisation" ToRole="GP_Services" />
-          <NavigationProperty Name="Organisation_Details" Relationship="Self.FK__ServicesO__Ref_O__7EACC042" FromRole="ServicesOrganisation" ToRole="Organisation_Details" />
-        </EntityType>
-        <EntityType Name="sysdiagram">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="GP_Services" Relationship="Self.FK__ServicesO__Ref_S__7F6BDA51" FromRole="ServicesOrganisation" ToRole="GP_Services" />
+          <NavigationProperty Name="Organisation_Details" Relationship="Self.FK__ServicesO__Ref_O__005FFE8A" FromRole="ServicesOrganisation" ToRole="Organisation_Details" />
         </EntityType>
         <EntityType Name="Telephone">
           <Key>
@@ -734,7 +727,7 @@
           </Key>
           <Property Name="Ref_Organisation_Details_ID" Type="Int32" Nullable="false" />
           <Property Name="Telephone_Number" Type="String" MaxLength="255" FixedLength="true" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Organisation_Details" Relationship="Self.FK__Telephone__Ref_O__0FD74C44" FromRole="Telephone" ToRole="Organisation_Details" />
+          <NavigationProperty Name="Organisation_Details" Relationship="Self.FK__Telephone__Ref_O__118A8A8C" FromRole="Telephone" ToRole="Organisation_Details" />
         </EntityType>
         <EntityType Name="Website">
           <Key>
@@ -743,9 +736,9 @@
           </Key>
           <Property Name="Ref_Organisation_Details_ID" Type="Int32" Nullable="false" />
           <Property Name="Website1" Type="String" MaxLength="255" FixedLength="true" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Organisation_Details" Relationship="Self.FK__Website__Ref_Org__17786E0C" FromRole="Website" ToRole="Organisation_Details" />
+          <NavigationProperty Name="Organisation_Details" Relationship="Self.FK__Website__Ref_Org__192BAC54" FromRole="Website" ToRole="Organisation_Details" />
         </EntityType>
-        <Association Name="FK__Addresses__Ref_O__1B48FEF0">
+        <Association Name="FK__Addresses__Ref_O__1CFC3D38">
           <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="1" />
           <End Role="Addresses" Type="Self.Address" Multiplicity="0..1" />
           <ReferentialConstraint>
@@ -757,7 +750,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Email__Ref_Organ__13A7DD28">
+        <Association Name="FK__Email__Ref_Organ__155B1B70">
           <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="1" />
           <End Role="Email" Type="Self.Email" Multiplicity="*" />
           <ReferentialConstraint>
@@ -769,7 +762,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Fax__Ref_Organis__0C06BB60">
+        <Association Name="FK__Fax__Ref_Organis__0DB9F9A8">
           <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="1" />
           <End Role="Fax" Type="Self.Fax" Multiplicity="*" />
           <ReferentialConstraint>
@@ -781,7 +774,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__GP_Disease__Ref___27AED5D5">
+        <Association Name="FK__GP_Disease__Ref___2962141D">
           <End Role="GP_Practice_Code" Type="Self.GP_Practice_Code" Multiplicity="0..1" />
           <End Role="GP_Disease_Prevalence" Type="Self.GP_Disease_Prevalence" Multiplicity="*" />
           <ReferentialConstraint>
@@ -793,7 +786,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__GP_Practi__Ref_O__200DB40D">
+        <Association Name="FK__GP_Practi__Ref_O__25918339">
           <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="1" />
           <End Role="GP_Practice_Code" Type="Self.GP_Practice_Code" Multiplicity="*" />
           <ReferentialConstraint>
@@ -805,7 +798,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__GP_Ratings__Ref___2F4FF79D">
+        <Association Name="FK__GP_Ratings__Ref___310335E5">
           <End Role="GP_Practice_Code" Type="Self.GP_Practice_Code" Multiplicity="0..1" />
           <End Role="GP_Ratings" Type="Self.GP_Ratings" Multiplicity="*" />
           <ReferentialConstraint>
@@ -817,7 +810,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__GP_Total_N__Ref___2B7F66B9">
+        <Association Name="FK__GP_Total_N__Ref___2D32A501">
           <End Role="GP_Practice_Code" Type="Self.GP_Practice_Code" Multiplicity="0..1" />
           <End Role="GP_Total_Numbers" Type="Self.GP_Total_Numbers" Multiplicity="*" />
           <ReferentialConstraint>
@@ -829,7 +822,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ServicesO__Ref_S__7DB89C09">
+        <Association Name="FK__ServicesO__Ref_S__7F6BDA51">
           <End Role="GP_Services" Type="Self.GP_Services" Multiplicity="1" />
           <End Role="ServicesOrganisation" Type="Self.ServicesOrganisation" Multiplicity="*" />
           <ReferentialConstraint>
@@ -841,7 +834,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__GP_Staff__Ref_Or__23DE44F1">
+        <Association Name="FK__GP_Staff__Ref_Or__20CCCE1C">
           <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="0..1" />
           <End Role="GP_Staff" Type="Self.GP_Staff" Multiplicity="*" />
           <ReferentialConstraint>
@@ -853,7 +846,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Location__Ref_Or__08362A7C">
+        <Association Name="FK__Location__Ref_Or__09E968C4">
           <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="1" />
           <End Role="Location" Type="Self.Location" Multiplicity="*" />
           <ReferentialConstraint>
@@ -865,7 +858,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Organisat__Ref_O__77FFC2B3">
+        <Association Name="FK__Organisat__Ref_O__79B300FB">
           <End Role="Organisation_Type" Type="Self.Organisation_Type" Multiplicity="1" />
           <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="*" />
           <ReferentialConstraint>
@@ -877,7 +870,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ParentOrg__Ref_O__04659998">
+        <Association Name="FK__ParentOrg__Ref_O__0618D7E0">
           <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="0..1" />
           <End Role="ParentOrganisation" Type="Self.ParentOrganisation" Multiplicity="*" />
           <ReferentialConstraint>
@@ -889,7 +882,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ServicesO__Ref_O__7EACC042">
+        <Association Name="FK__ServicesO__Ref_O__005FFE8A">
           <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="1" />
           <End Role="ServicesOrganisation" Type="Self.ServicesOrganisation" Multiplicity="*" />
           <ReferentialConstraint>
@@ -901,7 +894,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Telephone__Ref_O__0FD74C44">
+        <Association Name="FK__Telephone__Ref_O__118A8A8C">
           <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="1" />
           <End Role="Telephone" Type="Self.Telephone" Multiplicity="*" />
           <ReferentialConstraint>
@@ -913,7 +906,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Website__Ref_Org__17786E0C">
+        <Association Name="FK__Website__Ref_Org__192BAC54">
           <End Role="Organisation_Details" Type="Self.Organisation_Details" Multiplicity="1" />
           <End Role="Website" Type="Self.Website" Multiplicity="*" />
           <ReferentialConstraint>
@@ -925,7 +918,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ParentOrg__Ref_P__0371755F">
+        <Association Name="FK__ParentOrg__Ref_P__0524B3A7">
           <End Role="Parent" Type="Self.Parent" Multiplicity="0..1" />
           <End Role="ParentOrganisation" Type="Self.ParentOrganisation" Multiplicity="*" />
           <ReferentialConstraint>
@@ -937,7 +930,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="NHSPatientServicesEntities6" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="NHSPatientServicesEntities7" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Addresses" EntityType="Self.Address" />
           <EntitySet Name="Emails" EntityType="Self.Email" />
           <EntitySet Name="Faxes" EntityType="Self.Fax" />
@@ -953,96 +946,109 @@
           <EntitySet Name="Parents" EntityType="Self.Parent" />
           <EntitySet Name="ParentOrganisations" EntityType="Self.ParentOrganisation" />
           <EntitySet Name="ServicesOrganisations" EntityType="Self.ServicesOrganisation" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="Telephones" EntityType="Self.Telephone" />
           <EntitySet Name="Websites" EntityType="Self.Website" />
-          <AssociationSet Name="FK__Addresses__Ref_O__1B48FEF0" Association="Self.FK__Addresses__Ref_O__1B48FEF0">
+          <AssociationSet Name="FK__Addresses__Ref_O__1CFC3D38" Association="Self.FK__Addresses__Ref_O__1CFC3D38">
             <End Role="Organisation_Details" EntitySet="Organisation_Details" />
             <End Role="Addresses" EntitySet="Addresses" />
           </AssociationSet>
-          <AssociationSet Name="FK__Email__Ref_Organ__13A7DD28" Association="Self.FK__Email__Ref_Organ__13A7DD28">
+          <AssociationSet Name="FK__Email__Ref_Organ__155B1B70" Association="Self.FK__Email__Ref_Organ__155B1B70">
             <End Role="Organisation_Details" EntitySet="Organisation_Details" />
             <End Role="Email" EntitySet="Emails" />
           </AssociationSet>
-          <AssociationSet Name="FK__Fax__Ref_Organis__0C06BB60" Association="Self.FK__Fax__Ref_Organis__0C06BB60">
+          <AssociationSet Name="FK__Fax__Ref_Organis__0DB9F9A8" Association="Self.FK__Fax__Ref_Organis__0DB9F9A8">
             <End Role="Organisation_Details" EntitySet="Organisation_Details" />
             <End Role="Fax" EntitySet="Faxes" />
           </AssociationSet>
-          <AssociationSet Name="FK__GP_Disease__Ref___27AED5D5" Association="Self.FK__GP_Disease__Ref___27AED5D5">
+          <AssociationSet Name="FK__GP_Disease__Ref___2962141D" Association="Self.FK__GP_Disease__Ref___2962141D">
             <End Role="GP_Practice_Code" EntitySet="GP_Practice_Code" />
             <End Role="GP_Disease_Prevalence" EntitySet="GP_Disease_Prevalence" />
           </AssociationSet>
-          <AssociationSet Name="FK__GP_Practi__Ref_O__200DB40D" Association="Self.FK__GP_Practi__Ref_O__200DB40D">
+          <AssociationSet Name="FK__GP_Practi__Ref_O__25918339" Association="Self.FK__GP_Practi__Ref_O__25918339">
             <End Role="Organisation_Details" EntitySet="Organisation_Details" />
             <End Role="GP_Practice_Code" EntitySet="GP_Practice_Code" />
           </AssociationSet>
-          <AssociationSet Name="FK__GP_Ratings__Ref___2F4FF79D" Association="Self.FK__GP_Ratings__Ref___2F4FF79D">
+          <AssociationSet Name="FK__GP_Ratings__Ref___310335E5" Association="Self.FK__GP_Ratings__Ref___310335E5">
             <End Role="GP_Practice_Code" EntitySet="GP_Practice_Code" />
             <End Role="GP_Ratings" EntitySet="GP_Ratings" />
           </AssociationSet>
-          <AssociationSet Name="FK__GP_Total_N__Ref___2B7F66B9" Association="Self.FK__GP_Total_N__Ref___2B7F66B9">
+          <AssociationSet Name="FK__GP_Total_N__Ref___2D32A501" Association="Self.FK__GP_Total_N__Ref___2D32A501">
             <End Role="GP_Practice_Code" EntitySet="GP_Practice_Code" />
             <End Role="GP_Total_Numbers" EntitySet="GP_Total_Numbers" />
           </AssociationSet>
-          <AssociationSet Name="FK__ServicesO__Ref_S__7DB89C09" Association="Self.FK__ServicesO__Ref_S__7DB89C09">
+          <AssociationSet Name="FK__ServicesO__Ref_S__7F6BDA51" Association="Self.FK__ServicesO__Ref_S__7F6BDA51">
             <End Role="GP_Services" EntitySet="GP_Services" />
             <End Role="ServicesOrganisation" EntitySet="ServicesOrganisations" />
           </AssociationSet>
-          <AssociationSet Name="FK__GP_Staff__Ref_Or__23DE44F1" Association="Self.FK__GP_Staff__Ref_Or__23DE44F1">
+          <AssociationSet Name="FK__GP_Staff__Ref_Or__20CCCE1C" Association="Self.FK__GP_Staff__Ref_Or__20CCCE1C">
             <End Role="Organisation_Details" EntitySet="Organisation_Details" />
             <End Role="GP_Staff" EntitySet="GP_Staff" />
           </AssociationSet>
-          <AssociationSet Name="FK__Location__Ref_Or__08362A7C" Association="Self.FK__Location__Ref_Or__08362A7C">
+          <AssociationSet Name="FK__Location__Ref_Or__09E968C4" Association="Self.FK__Location__Ref_Or__09E968C4">
             <End Role="Organisation_Details" EntitySet="Organisation_Details" />
             <End Role="Location" EntitySet="Locations" />
           </AssociationSet>
-          <AssociationSet Name="FK__Organisat__Ref_O__77FFC2B3" Association="Self.FK__Organisat__Ref_O__77FFC2B3">
+          <AssociationSet Name="FK__Organisat__Ref_O__79B300FB" Association="Self.FK__Organisat__Ref_O__79B300FB">
             <End Role="Organisation_Type" EntitySet="Organisation_Type" />
             <End Role="Organisation_Details" EntitySet="Organisation_Details" />
           </AssociationSet>
-          <AssociationSet Name="FK__ParentOrg__Ref_O__04659998" Association="Self.FK__ParentOrg__Ref_O__04659998">
+          <AssociationSet Name="FK__ParentOrg__Ref_O__0618D7E0" Association="Self.FK__ParentOrg__Ref_O__0618D7E0">
             <End Role="Organisation_Details" EntitySet="Organisation_Details" />
             <End Role="ParentOrganisation" EntitySet="ParentOrganisations" />
           </AssociationSet>
-          <AssociationSet Name="FK__ServicesO__Ref_O__7EACC042" Association="Self.FK__ServicesO__Ref_O__7EACC042">
+          <AssociationSet Name="FK__ServicesO__Ref_O__005FFE8A" Association="Self.FK__ServicesO__Ref_O__005FFE8A">
             <End Role="Organisation_Details" EntitySet="Organisation_Details" />
             <End Role="ServicesOrganisation" EntitySet="ServicesOrganisations" />
           </AssociationSet>
-          <AssociationSet Name="FK__Telephone__Ref_O__0FD74C44" Association="Self.FK__Telephone__Ref_O__0FD74C44">
+          <AssociationSet Name="FK__Telephone__Ref_O__118A8A8C" Association="Self.FK__Telephone__Ref_O__118A8A8C">
             <End Role="Organisation_Details" EntitySet="Organisation_Details" />
             <End Role="Telephone" EntitySet="Telephones" />
           </AssociationSet>
-          <AssociationSet Name="FK__Website__Ref_Org__17786E0C" Association="Self.FK__Website__Ref_Org__17786E0C">
+          <AssociationSet Name="FK__Website__Ref_Org__192BAC54" Association="Self.FK__Website__Ref_Org__192BAC54">
             <End Role="Organisation_Details" EntitySet="Organisation_Details" />
             <End Role="Website" EntitySet="Websites" />
           </AssociationSet>
-          <AssociationSet Name="FK__ParentOrg__Ref_P__0371755F" Association="Self.FK__ParentOrg__Ref_P__0371755F">
+          <AssociationSet Name="FK__ParentOrg__Ref_P__0524B3A7" Association="Self.FK__ParentOrg__Ref_P__0524B3A7">
             <End Role="Parent" EntitySet="Parents" />
             <End Role="ParentOrganisation" EntitySet="ParentOrganisations" />
           </AssociationSet>
-          <FunctionImport Name="sp_All_England_Disease_Avg" ReturnType="Collection(NHSPatientServicesModel.sp_All_England_Disease_Avg_Result)" />
           <FunctionImport Name="sp_alterdiagram">
             <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
             <Parameter Name="version" Mode="In" Type="Int32" />
             <Parameter Name="definition" Mode="In" Type="Binary" />
           </FunctionImport>
+          <FunctionImport Name="sp_AverageAllDiseaseInEngland" ReturnType="Collection(NHSPatientServicesModel.sp_AverageAllDiseaseInEngland_Result)" />
           <FunctionImport Name="sp_AverageAllDiseaseInNHSTrust" ReturnType="Collection(NHSPatientServicesModel.sp_AverageAllDiseaseInNHSTrust_Result)">
             <Parameter Name="organisationCode" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_AveragePatientInEngland" ReturnType="Collection(Int32)" />
+          <FunctionImport Name="sp_AveragePatientInNHSTrust" ReturnType="Collection(Int64)">
+            <Parameter Name="PracticeCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_AverageRatingInEngland" ReturnType="Collection(NHSPatientServicesModel.sp_AverageRatingInEngland_Result)" />
           <FunctionImport Name="sp_AverageRatingInTrust" ReturnType="Collection(NHSPatientServicesModel.sp_AverageRatingInTrust_Result)">
             <Parameter Name="organisationCode" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="sp_AverageSpecificDiseaseInEngland" ReturnType="Collection(NHSPatientServicesModel.sp_AverageSpecificDiseaseInEngland_Result)">
+            <Parameter Name="ref" Mode="In" Type="String" />
+          </FunctionImport>
           <FunctionImport Name="sp_AverageSpecificDiseaseInNHSTrust" ReturnType="Collection(Int32)">
             <Parameter Name="organisationCode" Mode="In" Type="String" />
             <Parameter Name="indicator_group" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_AverageStaffInEngland" ReturnType="Collection(Int32)" />
+          <FunctionImport Name="sp_AverageStaffInNHSTrust" ReturnType="Collection(Int32)">
+            <Parameter Name="PracticeCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_creatediagram">
             <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
             <Parameter Name="version" Mode="In" Type="Int32" />
             <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_diseasesInNhsTrust" ReturnType="Collection(NHSPatientServicesModel.sp_diseasesInNhsTrust_Result)">
+            <Parameter Name="Indicator_Group" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_dropdiagram">
             <Parameter Name="diagramname" Mode="In" Type="String" />
@@ -1063,7 +1069,7 @@
           <FunctionImport Name="sp_MaxSpecificDiseaseInEngland" ReturnType="Collection(Int32)">
             <Parameter Name="IndicatorGroup" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="sp_MaxSpecificDiseaseInNHSTrust" ReturnType="Collection(Int32)">
+          <FunctionImport Name="sp_MaxSpecificDiseaseInNHSTrust" ReturnType="Collection(NHSPatientServicesModel.sp_MaxSpecificDiseaseInNHSTrust_Result)">
             <Parameter Name="organisationCode" Mode="In" Type="String" />
             <Parameter Name="IndicatorGroup" Mode="In" Type="String" />
           </FunctionImport>
@@ -1087,11 +1093,11 @@
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="sp_Specified_England_Disease_Avg" ReturnType="Collection(NHSPatientServicesModel.sp_Specified_England_Disease_Avg_Result)">
-            <Parameter Name="ref" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="sp_TotalAllDiseaseInSpecificGp" ReturnType="Collection(NHSPatientServicesModel.sp_TotalAllDiseaseInSpecificGp_Result)">
+          <FunctionImport Name="sp_TotalAllDiseaseInSpecificGP" ReturnType="Collection(NHSPatientServicesModel.sp_TotalAllDiseaseInSpecificGP_Result)">
             <Parameter Name="organisationCode" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_TotalPatientInSpecificGP" ReturnType="Collection(Int32)">
+            <Parameter Name="PracticeCode" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_TotalRatingInGP" ReturnType="Collection(NHSPatientServicesModel.sp_TotalRatingInGP_Result)">
             <Parameter Name="organisationCode" Mode="In" Type="String" />
@@ -1105,13 +1111,13 @@
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
         </EntityContainer>
-        <ComplexType Name="sp_All_England_Disease_Avg_Result">
+        <ComplexType Name="sp_AverageAllDiseaseInEngland_Result">
           <Property Type="String" Name="Disease_Name" Nullable="true" MaxLength="255" />
-          <Property Type="Int32" Name="average" Nullable="true" />
+          <Property Type="Int32" Name="Average_Number_of_Cases" Nullable="true" />
         </ComplexType>
         <ComplexType Name="sp_AverageAllDiseaseInNHSTrust_Result">
           <Property Type="String" Name="disease_name" Nullable="true" MaxLength="255" />
-          <Property Type="Int32" Name="average" Nullable="true" />
+          <Property Type="Int32" Name="Average" Nullable="true" />
         </ComplexType>
         <ComplexType Name="sp_AverageRatingInEngland_Result">
           <Property Type="Double" Name="Q14_Cant_Remember" Nullable="true" />
@@ -1127,21 +1133,33 @@
           <Property Type="Double" Name="Q14_Next_Working_Day" Nullable="true" />
           <Property Type="Double" Name="Q14_On_Same_day" Nullable="true" />
         </ComplexType>
+        <ComplexType Name="sp_AverageSpecificDiseaseInEngland_Result">
+          <Property Type="String" Name="Indicator_Group" Nullable="true" MaxLength="25" />
+          <Property Type="Int32" Name="average" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_diseasesInNhsTrust_Result">
+          <Property Type="Int32" Name="ref_parent_id" Nullable="true" />
+          <Property Type="Int32" Name="Average" Nullable="true" />
+        </ComplexType>
         <ComplexType Name="sp_MaxAllDiseaseInEngland_Result">
           <Property Type="String" Name="Disease_Name" Nullable="true" MaxLength="255" />
-          <Property Type="Int32" Name="max" Nullable="true" />
+          <Property Type="Int32" Name="Max_Number_of_cases" Nullable="true" />
         </ComplexType>
         <ComplexType Name="sp_MaxAllDiseaseInNHSTrust_Result">
-          <Property Type="String" Name="disease_name" Nullable="true" MaxLength="255" />
-          <Property Type="Int32" Name="Column1" Nullable="true" />
+          <Property Type="String" Name="Disease_Name" Nullable="true" MaxLength="255" />
+          <Property Type="Int32" Name="Max_Number_of_Cases" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_MaxSpecificDiseaseInNHSTrust_Result">
+          <Property Type="String" Name="Disease_Name" Nullable="true" MaxLength="255" />
+          <Property Type="Int32" Name="Max_Number_of_Cases" Nullable="true" />
         </ComplexType>
         <ComplexType Name="sp_MinAllDiseaseInEngland_Result">
           <Property Type="String" Name="Disease_Name" Nullable="true" MaxLength="255" />
-          <Property Type="Int32" Name="min" Nullable="true" />
+          <Property Type="Int32" Name="Min_Number_of_Cases" Nullable="true" />
         </ComplexType>
         <ComplexType Name="sp_MinAllDiseaseInNHSTrust_Result">
           <Property Type="String" Name="disease_name" Nullable="true" MaxLength="255" />
-          <Property Type="Int32" Name="Column1" Nullable="true" />
+          <Property Type="Int32" Name="Min_Number_of_Cases" Nullable="true" />
         </ComplexType>
         <ComplexType Name="sp_plot_Result">
           <Property Type="String" Name="Parent_Name" Nullable="true" />
@@ -1155,11 +1173,7 @@
           <Property Type="Double" Name="Q14_Few_Days_Later" Nullable="true" />
           <Property Type="Double" Name="Q14_On_Same_day" Nullable="true" />
         </ComplexType>
-        <ComplexType Name="sp_Specified_England_Disease_Avg_Result">
-          <Property Type="String" Name="Disease_Name" Nullable="true" MaxLength="255" />
-          <Property Type="Int32" Name="average" Nullable="true" />
-        </ComplexType>
-        <ComplexType Name="sp_TotalAllDiseaseInSpecificGp_Result">
+        <ComplexType Name="sp_TotalAllDiseaseInSpecificGP_Result">
           <Property Type="String" Name="Disease_Name" Nullable="true" MaxLength="255" />
           <Property Type="Int32" Name="Number_of_cases" Nullable="false" />
         </ComplexType>
@@ -1178,14 +1192,14 @@
         <ComplexType Name="sp_TotalStaffInSpecificGP_Result">
           <Property Type="String" Name="Job_Title" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="OrganisationCode" Nullable="true" MaxLength="25" />
-          <Property Type="Int32" Name="total" Nullable="true" />
+          <Property Type="Int32" Name="Total" Nullable="true" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="NHSPatientServicesModelStoreContainer" CdmEntityContainer="NHSPatientServicesEntities6">
+        <EntityContainerMapping StorageEntityContainer="NHSPatientServicesModelStoreContainer" CdmEntityContainer="NHSPatientServicesEntities7">
           <EntitySetMapping Name="Addresses">
             <EntityTypeMapping TypeName="NHSPatientServicesModel.Address">
               <MappingFragment StoreEntitySet="Addresses">
@@ -1290,8 +1304,8 @@
             <EntityTypeMapping TypeName="NHSPatientServicesModel.Location">
               <MappingFragment StoreEntitySet="Location">
                 <ScalarProperty Name="Ref_Organisation_Details_ID" ColumnName="Ref_Organisation_Details_ID" />
-                <ScalarProperty Name="Longtitude" ColumnName="Longtitude" />
                 <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Longtitude" ColumnName="Longtitude" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1342,17 +1356,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="NHSPatientServicesModel.sysdiagram">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Telephones">
             <EntityTypeMapping TypeName="NHSPatientServicesModel.Telephone">
               <MappingFragment StoreEntitySet="Telephone">
@@ -1369,23 +1372,25 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="sp_All_England_Disease_Avg" FunctionName="NHSPatientServicesModel.Store.sp_All_England_Disease_Avg">
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="NHSPatientServicesModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_AverageAllDiseaseInEngland" FunctionName="NHSPatientServicesModel.Store.sp_AverageAllDiseaseInEngland">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="NHSPatientServicesModel.sp_All_England_Disease_Avg_Result">
+              <ComplexTypeMapping TypeName="NHSPatientServicesModel.sp_AverageAllDiseaseInEngland_Result">
                 <ScalarProperty Name="Disease_Name" ColumnName="Disease_Name" />
-                <ScalarProperty Name="average" ColumnName="average" />
+                <ScalarProperty Name="Average_Number_of_Cases" ColumnName="Average_Number_of_Cases" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="NHSPatientServicesModel.Store.sp_alterdiagram" />
           <FunctionImportMapping FunctionImportName="sp_AverageAllDiseaseInNHSTrust" FunctionName="NHSPatientServicesModel.Store.sp_AverageAllDiseaseInNHSTrust">
             <ResultMapping>
               <ComplexTypeMapping TypeName="NHSPatientServicesModel.sp_AverageAllDiseaseInNHSTrust_Result">
                 <ScalarProperty Name="disease_name" ColumnName="disease_name" />
-                <ScalarProperty Name="average" ColumnName="average" />
+                <ScalarProperty Name="Average" ColumnName="Average" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_AveragePatientInEngland" FunctionName="NHSPatientServicesModel.Store.sp_AveragePatientInEngland" />
+          <FunctionImportMapping FunctionImportName="sp_AveragePatientInNHSTrust" FunctionName="NHSPatientServicesModel.Store.sp_AveragePatientInNHSTrust" />
           <FunctionImportMapping FunctionImportName="sp_AverageRatingInEngland" FunctionName="NHSPatientServicesModel.Store.sp_AverageRatingInEngland">
             <ResultMapping>
               <ComplexTypeMapping TypeName="NHSPatientServicesModel.sp_AverageRatingInEngland_Result">
@@ -1408,8 +1413,26 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_AverageSpecificDiseaseInEngland" FunctionName="NHSPatientServicesModel.Store.sp_AverageSpecificDiseaseInEngland">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="NHSPatientServicesModel.sp_AverageSpecificDiseaseInEngland_Result">
+                <ScalarProperty Name="Indicator_Group" ColumnName="Indicator_Group" />
+                <ScalarProperty Name="average" ColumnName="average" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_AverageSpecificDiseaseInNHSTrust" FunctionName="NHSPatientServicesModel.Store.sp_AverageSpecificDiseaseInNHSTrust" />
+          <FunctionImportMapping FunctionImportName="sp_AverageStaffInEngland" FunctionName="NHSPatientServicesModel.Store.sp_AverageStaffInEngland" />
+          <FunctionImportMapping FunctionImportName="sp_AverageStaffInNHSTrust" FunctionName="NHSPatientServicesModel.Store.sp_AverageStaffInNHSTrust" />
           <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="NHSPatientServicesModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_diseasesInNhsTrust" FunctionName="NHSPatientServicesModel.Store.sp_diseasesInNhsTrust">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="NHSPatientServicesModel.sp_diseasesInNhsTrust_Result">
+                <ScalarProperty Name="ref_parent_id" ColumnName="ref_parent_id" />
+                <ScalarProperty Name="Average" ColumnName="Average" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="NHSPatientServicesModel.Store.sp_dropdiagram" />
           <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="NHSPatientServicesModel.Store.sp_helpdiagramdefinition" />
           <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="NHSPatientServicesModel.Store.sp_helpdiagrams" />
@@ -1417,25 +1440,32 @@
             <ResultMapping>
               <ComplexTypeMapping TypeName="NHSPatientServicesModel.sp_MaxAllDiseaseInEngland_Result">
                 <ScalarProperty Name="Disease_Name" ColumnName="Disease_Name" />
-                <ScalarProperty Name="max" ColumnName="max" />
+                <ScalarProperty Name="Max_Number_of_cases" ColumnName="Max_Number_of_cases" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_MaxAllDiseaseInNHSTrust" FunctionName="NHSPatientServicesModel.Store.sp_MaxAllDiseaseInNHSTrust">
             <ResultMapping>
               <ComplexTypeMapping TypeName="NHSPatientServicesModel.sp_MaxAllDiseaseInNHSTrust_Result">
-                <ScalarProperty Name="disease_name" ColumnName="disease_name" />
-                <ScalarProperty Name="Column1" ColumnName="Column1" />
+                <ScalarProperty Name="Disease_Name" ColumnName="Disease_Name" />
+                <ScalarProperty Name="Max_Number_of_Cases" ColumnName="Max_Number_of_Cases" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_MaxSpecificDiseaseInEngland" FunctionName="NHSPatientServicesModel.Store.sp_MaxSpecificDiseaseInEngland" />
-          <FunctionImportMapping FunctionImportName="sp_MaxSpecificDiseaseInNHSTrust" FunctionName="NHSPatientServicesModel.Store.sp_MaxSpecificDiseaseInNHSTrust" />
+          <FunctionImportMapping FunctionImportName="sp_MaxSpecificDiseaseInNHSTrust" FunctionName="NHSPatientServicesModel.Store.sp_MaxSpecificDiseaseInNHSTrust">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="NHSPatientServicesModel.sp_MaxSpecificDiseaseInNHSTrust_Result">
+                <ScalarProperty Name="Disease_Name" ColumnName="Disease_Name" />
+                <ScalarProperty Name="Max_Number_of_Cases" ColumnName="Max_Number_of_Cases" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_MinAllDiseaseInEngland" FunctionName="NHSPatientServicesModel.Store.sp_MinAllDiseaseInEngland">
             <ResultMapping>
               <ComplexTypeMapping TypeName="NHSPatientServicesModel.sp_MinAllDiseaseInEngland_Result">
                 <ScalarProperty Name="Disease_Name" ColumnName="Disease_Name" />
-                <ScalarProperty Name="min" ColumnName="min" />
+                <ScalarProperty Name="Min_Number_of_Cases" ColumnName="Min_Number_of_Cases" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
@@ -1443,7 +1473,7 @@
             <ResultMapping>
               <ComplexTypeMapping TypeName="NHSPatientServicesModel.sp_MinAllDiseaseInNHSTrust_Result">
                 <ScalarProperty Name="disease_name" ColumnName="disease_name" />
-                <ScalarProperty Name="Column1" ColumnName="Column1" />
+                <ScalarProperty Name="Min_Number_of_Cases" ColumnName="Min_Number_of_Cases" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
@@ -1467,22 +1497,15 @@
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="NHSPatientServicesModel.Store.sp_renamediagram" />
-          <FunctionImportMapping FunctionImportName="sp_Specified_England_Disease_Avg" FunctionName="NHSPatientServicesModel.Store.sp_Specified_England_Disease_Avg">
+          <FunctionImportMapping FunctionImportName="sp_TotalAllDiseaseInSpecificGP" FunctionName="NHSPatientServicesModel.Store.sp_TotalAllDiseaseInSpecificGP">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="NHSPatientServicesModel.sp_Specified_England_Disease_Avg_Result">
-                <ScalarProperty Name="Disease_Name" ColumnName="Disease_Name" />
-                <ScalarProperty Name="average" ColumnName="average" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_TotalAllDiseaseInSpecificGp" FunctionName="NHSPatientServicesModel.Store.sp_TotalAllDiseaseInSpecificGp">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="NHSPatientServicesModel.sp_TotalAllDiseaseInSpecificGp_Result">
+              <ComplexTypeMapping TypeName="NHSPatientServicesModel.sp_TotalAllDiseaseInSpecificGP_Result">
                 <ScalarProperty Name="Disease_Name" ColumnName="Disease_Name" />
                 <ScalarProperty Name="Number_of_cases" ColumnName="Number_of_cases" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_TotalPatientInSpecificGP" FunctionName="NHSPatientServicesModel.Store.sp_TotalPatientInSpecificGP" />
           <FunctionImportMapping FunctionImportName="sp_TotalRatingInGP" FunctionName="NHSPatientServicesModel.Store.sp_TotalRatingInGP">
             <ResultMapping>
               <ComplexTypeMapping TypeName="NHSPatientServicesModel.sp_TotalRatingInGP_Result">
@@ -1508,7 +1531,7 @@
               <ComplexTypeMapping TypeName="NHSPatientServicesModel.sp_TotalStaffInSpecificGP_Result">
                 <ScalarProperty Name="Job_Title" ColumnName="Job_Title" />
                 <ScalarProperty Name="OrganisationCode" ColumnName="OrganisationCode" />
-                <ScalarProperty Name="total" ColumnName="total" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

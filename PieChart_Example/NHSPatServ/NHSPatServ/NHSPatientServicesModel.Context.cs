@@ -15,10 +15,10 @@ namespace NHSPatServ
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class NHSPatientServicesEntities6 : DbContext
+    public partial class NHSPatientServicesEntities7 : DbContext
     {
-        public NHSPatientServicesEntities6()
-            : base("name=NHSPatientServicesEntities6")
+        public NHSPatientServicesEntities7()
+            : base("name=NHSPatientServicesEntities7")
         {
         }
     
@@ -42,14 +42,8 @@ namespace NHSPatServ
         public virtual DbSet<Parent> Parents { get; set; }
         public virtual DbSet<ParentOrganisation> ParentOrganisations { get; set; }
         public virtual DbSet<ServicesOrganisation> ServicesOrganisations { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Telephone> Telephones { get; set; }
         public virtual DbSet<Website> Websites { get; set; }
-    
-        public virtual ObjectResult<sp_All_England_Disease_Avg_Result> sp_All_England_Disease_Avg()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_All_England_Disease_Avg_Result>("sp_All_England_Disease_Avg");
-        }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {
@@ -72,6 +66,11 @@ namespace NHSPatServ
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_alterdiagram", diagramnameParameter, owner_idParameter, versionParameter, definitionParameter);
         }
     
+        public virtual ObjectResult<sp_AverageAllDiseaseInEngland_Result> sp_AverageAllDiseaseInEngland()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_AverageAllDiseaseInEngland_Result>("sp_AverageAllDiseaseInEngland");
+        }
+    
         public virtual ObjectResult<sp_AverageAllDiseaseInNHSTrust_Result> sp_AverageAllDiseaseInNHSTrust(string organisationCode)
         {
             var organisationCodeParameter = organisationCode != null ?
@@ -79,6 +78,20 @@ namespace NHSPatServ
                 new ObjectParameter("organisationCode", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_AverageAllDiseaseInNHSTrust_Result>("sp_AverageAllDiseaseInNHSTrust", organisationCodeParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<int>> sp_AveragePatientInEngland()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("sp_AveragePatientInEngland");
+        }
+    
+        public virtual ObjectResult<Nullable<long>> sp_AveragePatientInNHSTrust(string practiceCode)
+        {
+            var practiceCodeParameter = practiceCode != null ?
+                new ObjectParameter("PracticeCode", practiceCode) :
+                new ObjectParameter("PracticeCode", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<long>>("sp_AveragePatientInNHSTrust", practiceCodeParameter);
         }
     
         public virtual ObjectResult<sp_AverageRatingInEngland_Result> sp_AverageRatingInEngland()
@@ -95,6 +108,15 @@ namespace NHSPatServ
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_AverageRatingInTrust_Result>("sp_AverageRatingInTrust", organisationCodeParameter);
         }
     
+        public virtual ObjectResult<sp_AverageSpecificDiseaseInEngland_Result> sp_AverageSpecificDiseaseInEngland(string @ref)
+        {
+            var refParameter = @ref != null ?
+                new ObjectParameter("ref", @ref) :
+                new ObjectParameter("ref", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_AverageSpecificDiseaseInEngland_Result>("sp_AverageSpecificDiseaseInEngland", refParameter);
+        }
+    
         public virtual ObjectResult<Nullable<int>> sp_AverageSpecificDiseaseInNHSTrust(string organisationCode, string indicator_group)
         {
             var organisationCodeParameter = organisationCode != null ?
@@ -106,6 +128,20 @@ namespace NHSPatServ
                 new ObjectParameter("indicator_group", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("sp_AverageSpecificDiseaseInNHSTrust", organisationCodeParameter, indicator_groupParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<int>> sp_AverageStaffInEngland()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("sp_AverageStaffInEngland");
+        }
+    
+        public virtual ObjectResult<Nullable<int>> sp_AverageStaffInNHSTrust(string practiceCode)
+        {
+            var practiceCodeParameter = practiceCode != null ?
+                new ObjectParameter("PracticeCode", practiceCode) :
+                new ObjectParameter("PracticeCode", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("sp_AverageStaffInNHSTrust", practiceCodeParameter);
         }
     
         public virtual int sp_creatediagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
@@ -127,6 +163,15 @@ namespace NHSPatServ
                 new ObjectParameter("definition", typeof(byte[]));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_creatediagram", diagramnameParameter, owner_idParameter, versionParameter, definitionParameter);
+        }
+    
+        public virtual ObjectResult<sp_diseasesInNhsTrust_Result> sp_diseasesInNhsTrust(string indicator_Group)
+        {
+            var indicator_GroupParameter = indicator_Group != null ?
+                new ObjectParameter("Indicator_Group", indicator_Group) :
+                new ObjectParameter("Indicator_Group", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_diseasesInNhsTrust_Result>("sp_diseasesInNhsTrust", indicator_GroupParameter);
         }
     
         public virtual int sp_dropdiagram(string diagramname, Nullable<int> owner_id)
@@ -191,7 +236,7 @@ namespace NHSPatServ
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("sp_MaxSpecificDiseaseInEngland", indicatorGroupParameter);
         }
     
-        public virtual ObjectResult<Nullable<int>> sp_MaxSpecificDiseaseInNHSTrust(string organisationCode, string indicatorGroup)
+        public virtual ObjectResult<sp_MaxSpecificDiseaseInNHSTrust_Result> sp_MaxSpecificDiseaseInNHSTrust(string organisationCode, string indicatorGroup)
         {
             var organisationCodeParameter = organisationCode != null ?
                 new ObjectParameter("organisationCode", organisationCode) :
@@ -201,7 +246,7 @@ namespace NHSPatServ
                 new ObjectParameter("IndicatorGroup", indicatorGroup) :
                 new ObjectParameter("IndicatorGroup", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("sp_MaxSpecificDiseaseInNHSTrust", organisationCodeParameter, indicatorGroupParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_MaxSpecificDiseaseInNHSTrust_Result>("sp_MaxSpecificDiseaseInNHSTrust", organisationCodeParameter, indicatorGroupParameter);
         }
     
         public virtual ObjectResult<sp_MinAllDiseaseInEngland_Result> sp_MinAllDiseaseInEngland()
@@ -271,22 +316,22 @@ namespace NHSPatServ
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_renamediagram", diagramnameParameter, owner_idParameter, new_diagramnameParameter);
         }
     
-        public virtual ObjectResult<sp_Specified_England_Disease_Avg_Result> sp_Specified_England_Disease_Avg(string @ref)
-        {
-            var refParameter = @ref != null ?
-                new ObjectParameter("ref", @ref) :
-                new ObjectParameter("ref", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_Specified_England_Disease_Avg_Result>("sp_Specified_England_Disease_Avg", refParameter);
-        }
-    
-        public virtual ObjectResult<sp_TotalAllDiseaseInSpecificGp_Result> sp_TotalAllDiseaseInSpecificGp(string organisationCode)
+        public virtual ObjectResult<sp_TotalAllDiseaseInSpecificGP_Result> sp_TotalAllDiseaseInSpecificGP(string organisationCode)
         {
             var organisationCodeParameter = organisationCode != null ?
                 new ObjectParameter("organisationCode", organisationCode) :
                 new ObjectParameter("organisationCode", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_TotalAllDiseaseInSpecificGp_Result>("sp_TotalAllDiseaseInSpecificGp", organisationCodeParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_TotalAllDiseaseInSpecificGP_Result>("sp_TotalAllDiseaseInSpecificGP", organisationCodeParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<int>> sp_TotalPatientInSpecificGP(string practiceCode)
+        {
+            var practiceCodeParameter = practiceCode != null ?
+                new ObjectParameter("PracticeCode", practiceCode) :
+                new ObjectParameter("PracticeCode", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("sp_TotalPatientInSpecificGP", practiceCodeParameter);
         }
     
         public virtual ObjectResult<sp_TotalRatingInGP_Result> sp_TotalRatingInGP(string organisationCode)

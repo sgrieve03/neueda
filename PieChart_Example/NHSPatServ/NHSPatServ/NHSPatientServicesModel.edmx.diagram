@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f466f4475e6146c88559add17fc8baa5" Name="Diagram1">
+      <Diagram DiagramId="77c15b5a3fd343dc83acea04b92c1233" Name="Diagram1">
         <EntityTypeShape EntityType="NHSPatientServicesModel.Address" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
         <EntityTypeShape EntityType="NHSPatientServicesModel.Email" Width="1.5" PointX="5.25" PointY="8.5" IsExpanded="true" />
         <EntityTypeShape EntityType="NHSPatientServicesModel.Fax" Width="1.5" PointX="5.25" PointY="10.875" IsExpanded="true" />
@@ -20,25 +20,24 @@
         <EntityTypeShape EntityType="NHSPatientServicesModel.Parent" Width="1.5" PointX="3" PointY="22.375" IsExpanded="true" />
         <EntityTypeShape EntityType="NHSPatientServicesModel.ParentOrganisation" Width="1.5" PointX="5.25" PointY="21.25" IsExpanded="true" />
         <EntityTypeShape EntityType="NHSPatientServicesModel.ServicesOrganisation" Width="1.5" PointX="5.25" PointY="14.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="NHSPatientServicesModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="NHSPatientServicesModel.Telephone" Width="1.5" PointX="5.25" PointY="34.875" IsExpanded="true" />
         <EntityTypeShape EntityType="NHSPatientServicesModel.Website" Width="1.5" PointX="5.25" PointY="37.25" IsExpanded="true" />
-        <AssociationConnector Association="NHSPatientServicesModel.FK__Addresses__Ref_O__1B48FEF0" ManuallyRouted="false" />
-        <AssociationConnector Association="NHSPatientServicesModel.FK__Email__Ref_Organ__13A7DD28" ManuallyRouted="false" />
-        <AssociationConnector Association="NHSPatientServicesModel.FK__Fax__Ref_Organis__0C06BB60" ManuallyRouted="false" />
-        <AssociationConnector Association="NHSPatientServicesModel.FK__GP_Disease__Ref___27AED5D5" ManuallyRouted="false" />
-        <AssociationConnector Association="NHSPatientServicesModel.FK__GP_Practi__Ref_O__200DB40D" ManuallyRouted="false" />
-        <AssociationConnector Association="NHSPatientServicesModel.FK__GP_Ratings__Ref___2F4FF79D" ManuallyRouted="false" />
-        <AssociationConnector Association="NHSPatientServicesModel.FK__GP_Total_N__Ref___2B7F66B9" ManuallyRouted="false" />
-        <AssociationConnector Association="NHSPatientServicesModel.FK__ServicesO__Ref_S__7DB89C09" ManuallyRouted="false" />
-        <AssociationConnector Association="NHSPatientServicesModel.FK__GP_Staff__Ref_Or__23DE44F1" ManuallyRouted="false" />
-        <AssociationConnector Association="NHSPatientServicesModel.FK__Location__Ref_Or__08362A7C" ManuallyRouted="false" />
-        <AssociationConnector Association="NHSPatientServicesModel.FK__Organisat__Ref_O__77FFC2B3" ManuallyRouted="false" />
-        <AssociationConnector Association="NHSPatientServicesModel.FK__ParentOrg__Ref_O__04659998" ManuallyRouted="false" />
-        <AssociationConnector Association="NHSPatientServicesModel.FK__ServicesO__Ref_O__7EACC042" ManuallyRouted="false" />
-        <AssociationConnector Association="NHSPatientServicesModel.FK__Telephone__Ref_O__0FD74C44" ManuallyRouted="false" />
-        <AssociationConnector Association="NHSPatientServicesModel.FK__Website__Ref_Org__17786E0C" ManuallyRouted="false" />
-        <AssociationConnector Association="NHSPatientServicesModel.FK__ParentOrg__Ref_P__0371755F" ManuallyRouted="false" />
+        <AssociationConnector Association="NHSPatientServicesModel.FK__Addresses__Ref_O__1CFC3D38" ManuallyRouted="false" />
+        <AssociationConnector Association="NHSPatientServicesModel.FK__Email__Ref_Organ__155B1B70" ManuallyRouted="false" />
+        <AssociationConnector Association="NHSPatientServicesModel.FK__Fax__Ref_Organis__0DB9F9A8" ManuallyRouted="false" />
+        <AssociationConnector Association="NHSPatientServicesModel.FK__GP_Disease__Ref___2962141D" ManuallyRouted="false" />
+        <AssociationConnector Association="NHSPatientServicesModel.FK__GP_Practi__Ref_O__25918339" ManuallyRouted="false" />
+        <AssociationConnector Association="NHSPatientServicesModel.FK__GP_Ratings__Ref___310335E5" ManuallyRouted="false" />
+        <AssociationConnector Association="NHSPatientServicesModel.FK__GP_Total_N__Ref___2D32A501" ManuallyRouted="false" />
+        <AssociationConnector Association="NHSPatientServicesModel.FK__ServicesO__Ref_S__7F6BDA51" ManuallyRouted="false" />
+        <AssociationConnector Association="NHSPatientServicesModel.FK__GP_Staff__Ref_Or__20CCCE1C" ManuallyRouted="false" />
+        <AssociationConnector Association="NHSPatientServicesModel.FK__Location__Ref_Or__09E968C4" ManuallyRouted="false" />
+        <AssociationConnector Association="NHSPatientServicesModel.FK__Organisat__Ref_O__79B300FB" ManuallyRouted="false" />
+        <AssociationConnector Association="NHSPatientServicesModel.FK__ParentOrg__Ref_O__0618D7E0" ManuallyRouted="false" />
+        <AssociationConnector Association="NHSPatientServicesModel.FK__ServicesO__Ref_O__005FFE8A" ManuallyRouted="false" />
+        <AssociationConnector Association="NHSPatientServicesModel.FK__Telephone__Ref_O__118A8A8C" ManuallyRouted="false" />
+        <AssociationConnector Association="NHSPatientServicesModel.FK__Website__Ref_Org__192BAC54" ManuallyRouted="false" />
+        <AssociationConnector Association="NHSPatientServicesModel.FK__ParentOrg__Ref_P__0524B3A7" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

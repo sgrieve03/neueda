@@ -14,6 +14,6 @@ namespace NHSPatServ
     public partial class sp_AverageAllDiseaseInNHSTrust_Result
     {
         public string disease_name { get; set; }
-        public Nullable<int> average { get; set; }
+        public Nullable<int> Average { get; set; }
     }
 }

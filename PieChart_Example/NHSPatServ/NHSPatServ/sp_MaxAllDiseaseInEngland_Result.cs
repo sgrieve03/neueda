@@ -14,6 +14,6 @@ namespace NHSPatServ
     public partial class sp_MaxAllDiseaseInEngland_Result
     {
         public string Disease_Name { get; set; }
-        public Nullable<int> max { get; set; }
+        public Nullable<int> Max_Number_of_cases { get; set; }
     }
 }

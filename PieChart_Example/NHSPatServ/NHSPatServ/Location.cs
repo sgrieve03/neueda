@@ -15,8 +15,8 @@ namespace NHSPatServ
     public partial class Location
     {
         public int Ref_Organisation_Details_ID { get; set; }
-        public double Longtitude { get; set; }
         public double Latitude { get; set; }
+        public double Longtitude { get; set; }
     
         public virtual Organisation_Details Organisation_Details { get; set; }
     }

@@ -14,6 +14,6 @@ namespace NHSPatServ
     public partial class sp_MinAllDiseaseInNHSTrust_Result
     {
         public string disease_name { get; set; }
-        public Nullable<int> Column1 { get; set; }
+        public Nullable<int> Min_Number_of_Cases { get; set; }
     }
 }

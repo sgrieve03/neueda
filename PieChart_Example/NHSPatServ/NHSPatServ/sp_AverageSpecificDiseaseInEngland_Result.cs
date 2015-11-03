@@ -11,9 +11,9 @@ namespace NHSPatServ
 {
     using System;
     
-    public partial class sp_MinAllDiseaseInEngland_Result
+    public partial class sp_AverageSpecificDiseaseInEngland_Result
     {
-        public string Disease_Name { get; set; }
-        public Nullable<int> Min_Number_of_Cases { get; set; }
+        public string Indicator_Group { get; set; }
+        public Nullable<int> average { get; set; }
     }
 }

@@ -13,7 +13,7 @@ namespace NHSPatServ
     
     public partial class sp_MaxAllDiseaseInNHSTrust_Result
     {
-        public string disease_name { get; set; }
-        public Nullable<int> Column1 { get; set; }
+        public string Disease_Name { get; set; }
+        public Nullable<int> Max_Number_of_Cases { get; set; }
     }
 }

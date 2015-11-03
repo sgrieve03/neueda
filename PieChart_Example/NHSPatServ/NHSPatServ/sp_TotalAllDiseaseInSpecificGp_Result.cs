@@ -11,7 +11,7 @@ namespace NHSPatServ
 {
     using System;
     
-    public partial class sp_TotalAllDiseaseInSpecificGp_Result
+    public partial class sp_TotalAllDiseaseInSpecificGP_Result
     {
         public string Disease_Name { get; set; }
         public int Number_of_cases { get; set; }

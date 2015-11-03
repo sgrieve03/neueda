@@ -15,6 +15,6 @@ namespace NHSPatServ
     {
         public string Job_Title { get; set; }
         public string OrganisationCode { get; set; }
-        public Nullable<int> total { get; set; }
+        public Nullable<int> Total { get; set; }
     }
 }
