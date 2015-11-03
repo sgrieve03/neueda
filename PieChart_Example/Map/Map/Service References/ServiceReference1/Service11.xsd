@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/NHSPatServices" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/NHSPatServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="search">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AverageAllDiseaseInEngland" />
+      <xs:enumeration value="MaxAllDiseaseInEngland" />
+      <xs:enumeration value="MinAllDiseaseInEngland" />
+      <xs:enumeration value="AverageSpecificDiseaseInEngland" />
+      <xs:enumeration value="MaxSpecificDiseaseInEngland" />
+      <xs:enumeration value="MinSpecificDiseaseInEngland" />
+      <xs:enumeration value="AverageAllDiseaseInNHSTrust" />
+      <xs:enumeration value="MaxAllDiseaseInNHSTrust" />
+      <xs:enumeration value="MinAllDiseaseInNHSTrust" />
+      <xs:enumeration value="AverageSpecificDiseaseInNHSTrust" />
+      <xs:enumeration value="MaxSpecificDiseaseInNHSTrust" />
+      <xs:enumeration value="MinSpecificDiseaseInNHSTrust" />
+      <xs:enumeration value="TotalAllDiseaseInSpecificGP" />
+      <xs:enumeration value="TotalSpecificDiseaseInGP" />
+      <xs:enumeration value="AverageStaffInEngland" />
+      <xs:enumeration value="AverageStaffInNHSTrust" />
+      <xs:enumeration value="TotalStaffInSpecificGP" />
+      <xs:enumeration value="AveragePatientInEngland" />
+      <xs:enumeration value="AveragePatientInNHSTrust" />
+      <xs:enumeration value="TotalPatientInSpecificGP" />
+      <xs:enumeration value="AverageRatingInEngland" />
+      <xs:enumeration value="AverageRatingInTrust" />
+      <xs:enumeration value="TotalRatingInGP" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="search" nillable="true" type="tns:search" />
+  <xs:complexType name="ArrayOfPlottableObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlottableObject" nillable="true" type="tns:PlottableObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlottableObject" nillable="true" type="tns:ArrayOfPlottableObject" />
+  <xs:complexType name="PlottableObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ref_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlottableObject" nillable="true" type="tns:PlottableObject" />
+  <xs:complexType name="ArrayOfMappableObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MappableObject" nillable="true" type="tns:MappableObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMappableObject" nillable="true" type="tns:ArrayOfMappableObject" />
+  <xs:complexType name="MappableObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Latitude" type="xs:double" />
+      <xs:element minOccurs="0" name="Longitude" type="xs:double" />
+      <xs:element minOccurs="0" name="info" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MappableObject" nillable="true" type="tns:MappableObject" />
+</xs:schema>

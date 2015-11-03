@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://maps.googleapis.com/maps/api/js">
+    </script>
+    <style item="map" >
+        
+    </style>
+    <script>
+      
+        var myCenter = new google.maps.LatLng(52.508742, -2.020850);
+        var newCenter = new google.maps.LatLng(53, 0);
+        var asthmaPrev = new google.maps.LatLng(54.0000, 2.0000)
+        var a = new google.maps.LatLng(52.4866218566895,1.75512146949768 );
+  
+        var styles = [{
+      stylers: [
+        { hue: "#80808" },
+        { saturation: -20 }
+      ]
+        }, {
+            featureType: "water",
+            "stylers": [
+      { "color": "#808080" }
+            ]
+        } , {
+            "featureType": "road.highway",
+            "stylers": [
+              { "color": "#dadada" }
+            ]
+        }, {
+            "featureType": "administrative",
+            "stylers": [
+              { "visibility": "off" }
+            ]
+        }, {
+            "featureType": "road.highway.controlled_access",
+            "stylers": [
+              { "color": "#dadada" }
+            ]
+        }, {
+      featureType: "road",
+      elementType: "geometry",
+      stylers: [
+          {"color": "#dadada"},
+        { lightness: 100 },
+        { visibility: "simplified" }
+      ]
+        }, {
+            "featureType": "landscape",
+            "stylers": [
+              { "color": "#dadada" }
+            ]
+        }, {
+            "featureType": "poi",
+            "stylers": [
+              { "color": "#dadada" }
+            ]
+        }, {
+      featureType: "road",
+      elementType: "labels",
+      stylers: [
+        { visibility: "off" }
+      ]
+  }
+        ];
+        var iconBase = {url:"http://maps.google.com/mapfiles/kml/paddle/ylw-blank-lv.png" , scaledSize: new google.maps.Size(2, 2),};
+        
+function initialize()
+        {
+    
+    var mapProp = {
+        center: myCenter,
+        zoom: 6,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+        
+    };
+  
+
+    var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+map.setOptions({ styles: styles });
+var marker=new google.maps.Marker({ 
+    icon: iconBase,
+  position:a
+});
+var yorkshire = new google.maps.Circle({ radius: 2000, Map:map });
+var newMarker = new google.maps.Marker({ position: a });
+
+newMarker.setMap(map);
+marker.setMap(map);
+yorkshire.bindTo('center', newMarker, 'position');
+var balloon = new google.maps.InfoWindow({ position: myCenter });
+balloon.setContent("Hello there!!");
+balloon.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</head>
+
+<body>
+    <div id="Header" style="height:80px; font-family:'Lucida Sans'; font-size:large; align-content:center">My Fab Map</div>
+    
+    <div id="googleMap" style="width:360px;height:450px;"></div>
+    
+</body>
+
+
+</html>

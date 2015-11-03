@@ -1,0 +1,43 @@
+﻿
+[
+  {
+    "featureType": "water",
+    "elementType": "geometry",
+    "stylers": [
+      { "color": "#808080" }
+    ]
+  },{
+    "featureType": "landscape.man_made",
+    "stylers": [
+      { "color": "#ecebe9" }
+    ]
+  },{
+    "featureType": "landscape.natural",
+    "stylers": [
+      { "color": "#dedada" }
+    ]
+  },{
+    "featureType": "road.highway",
+    "stylers": [
+      { "color": "#e2e4e2" }
+    ]
+  },{
+    "featureType": "landscape.natural.landcover",
+    "stylers": [
+      { "color": "#e8efec" }
+    ]
+  },{
+    "featureType": "landscape.natural.terrain",
+    "stylers": [
+      { "color": "#e5e8e4" }
+    ]
+  },{
+    "featureType": "poi.park",
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "color": "#dededf" }
+    ]
+  },{
+  }
+]
+
