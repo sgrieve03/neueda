@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "MainPage";
+}
+
+<h2>MainPage</h2>
+<br />
+<br />
+<br />
+<br />
+<div class="row placeholders">
+    <div class="col-xs-6 col-sm-3 placeholder text-center pull-left" style="padding-right:50px;">
+        <a href='@Url.Action("BindDecimalValues", "ServicesOrganisations")'>
+            <img src="~/Content/Images/graph.png" class="center-block img-responsive img-responsive" alt="Generic placeholder thumbnail">
+        </a>
+            <h4>Reports</h4>
+            <span class="text-muted">See Our Reports</span>
+</div>
+    <div class="col-xs-6 col-sm-3 placeholder text-center" style="padding-right:50px;">
+        <a href='@Url.Action("HighMap", "ServicesOrganisations")'>
+            <img src="~/Content/Images/uk_map.png" class="center-block img-responsive img-circle" alt="Generic placeholder thumbnail">
+            </a>
+            <h4>Maps</h4>
+            <span class="text-muted">See Our Maps</span>
+</div>
+ 
+</div>

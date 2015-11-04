@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="71f13ecf8b1848a58db4ad455056fa70" Name="Diagram1">
+        <EntityTypeShape EntityType="NHSPatientServicesModel.Address" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NHSPatientServicesModel.Email" Width="1.5" PointX="5.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NHSPatientServicesModel.Fax" Width="1.5" PointX="5.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NHSPatientServicesModel.GP_Services" Width="1.5" PointX="6" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="NHSPatientServicesModel.Location" Width="1.5" PointX="5.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NHSPatientServicesModel.Organisation_Details" Width="1.5" PointX="3" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NHSPatientServicesModel.Organisation_Type" Width="1.5" PointX="0.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="NHSPatientServicesModel.Parent" Width="1.5" PointX="6" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NHSPatientServicesModel.ParentOrganisation" Width="1.5" PointX="8.25" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NHSPatientServicesModel.ServicesOrganisation" Width="1.5" PointX="8.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NHSPatientServicesModel.Telephone" Width="1.5" PointX="5.25" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NHSPatientServicesModel.Website" Width="1.5" PointX="5.25" PointY="22.875" IsExpanded="true" />
+        <AssociationConnector Association="NHSPatientServicesModel.FK__Addresses__Ref_O__379037E3" ManuallyRouted="false" />
+        <AssociationConnector Association="NHSPatientServicesModel.FK__Email__Ref_Organ__2FEF161B" ManuallyRouted="false" />
+        <AssociationConnector Association="NHSPatientServicesModel.FK__Fax__Ref_Organis__284DF453" ManuallyRouted="false" />
+        <AssociationConnector Association="NHSPatientServicesModel.FK__ServicesO__Ref_S__19FFD4FC" ManuallyRouted="false" />
+        <AssociationConnector Association="NHSPatientServicesModel.FK__Location__Ref_Or__247D636F" ManuallyRouted="false" />
+        <AssociationConnector Association="NHSPatientServicesModel.FK__Organisat__Ref_O__1446FBA6" ManuallyRouted="false" />
+        <AssociationConnector Association="NHSPatientServicesModel.FK__ParentOrg__Ref_O__20ACD28B" ManuallyRouted="false" />
+        <AssociationConnector Association="NHSPatientServicesModel.FK__ServicesO__Ref_O__1AF3F935" ManuallyRouted="false" />
+        <AssociationConnector Association="NHSPatientServicesModel.FK__Telephone__Ref_O__2C1E8537" ManuallyRouted="false" />
+        <AssociationConnector Association="NHSPatientServicesModel.FK__Website__Ref_Org__33BFA6FF" ManuallyRouted="false" />
+        <AssociationConnector Association="NHSPatientServicesModel.FK__ParentOrg__Ref_P__1FB8AE52" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

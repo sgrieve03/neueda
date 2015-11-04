@@ -1,0 +1,107 @@
+﻿@model IList<dotNetHighcharts.Models.MapDetails>
+@{
+    ViewBag.Title = "Maps";
+}
+
+<h2>Maps</h2>
+<br/>
+
+<div id="container"></div>
+@*Style tags used to style container map is stored*@
+<style>
+    #container {
+    height: 600px;
+    width: 700px;
+
+    margin: 0 auto;
+}
+.loading {
+    margin-top: 10em;
+    text-align: center;
+    color: gray;
+}
+</style>
+@*Script section used to draw map*@
+@section Scripts{
+<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.6/proj4.js"></script>
+@Scripts.Render("~/Scripts/HighMaps/js/highcharts.js")
+@Scripts.Render("~/Scripts/HighMaps/js/highcharts-more.js")
+@Scripts.Render("~/Scripts/HighMaps/js/modules/map.js")
+@Scripts.Render("~/Scripts/HighMaps/js/modules/exporting.js")
+<script src="https://code.highcharts.com/mapdata/countries/gb/gb-all.js"></script>
+
+<script type="text/javascript">
+//JSON used to pass objects from controller to view
+$.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=world-population.json&callback=?',
+        function (json) {
+    // Initiate the chart
+        $('#container').highcharts('Map', {
+            chart: {
+                backgroundColor: {
+                    linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+                    stops: [
+                        [0, '#cddee4'],
+                        [1, '#4b96af']
+                    ]
+                }
+            },
+            title: {
+                text: 'UK Map'
+            },
+
+            mapNavigation: {
+                enabled: true
+            },
+
+            tooltip: {
+                headerFormat: '',
+                pointFormat: '<b>{point.name}</b><br>Disease Prevelance: {point.z}</b><br>Average Staff: {point.avgStaff}'
+            },
+
+            series: [{
+                // Use the gb-all map with no data as a basemap
+                mapData: Highcharts.maps['countries/gb/gb-all'],
+                name: 'Basemap',
+                borderColor: '#A0A0A0',
+                nullColor: '#E5E5E5',
+                color: 'red',
+                showInLegend: false
+            }, {
+                //start of bubble data for chart
+                type: 'mapbubble',
+                dataLabels: {
+                    enabled: false,
+                    format: '{point.name}'
+                },
+                name: 'Heart',
+                enabled: false,
+                data:@Html.Raw(Json.Encode(Model)),
+                maxSize: '8%',
+                color: Highcharts.getOptions().colors[1]
+                },{
+                type: 'mapbubble',
+                dataLabels: {
+                    enabled: false,
+                    format: '{point.name}'
+                },
+                name: 'Cancer',
+                enabled: false,
+                data:@Html.Raw(Json.Encode(ViewBag.Cancer)),
+                maxSize: '8%',
+                color: Highcharts.getOptions().colors[2]
+                },{
+                type: 'mapbubble',
+                dataLabels: {
+                enabled: false,
+                format: '{point.name}'
+                },
+                name: 'Thyroid',
+                enabled: false,
+                data:@Html.Raw(Json.Encode(ViewBag.Cancer)),
+                maxSize: '8%',
+                color: Highcharts.getOptions().colors[3]
+                }]
+    });
+});
+</script>
+  }

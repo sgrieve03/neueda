@@ -1,0 +1,97 @@
+﻿
+@{
+    Layout = null;
+}
+@Styles.Render("~/Content/bootstrap.css")
+@Styles.Render("~/Content/bootstrap.min.css")
+
+
+@Styles.Render("~/Content/LandingPage/css/styles.css")
+@Styles.Render("~/Content/font-awesome/css/font-awesome.css")
+<div class="container-full">
+
+    <div class="row">
+
+        <div class="col-lg-12 text-center v-center">
+            <img src="~/Content/Images/logo.png" width="500" height="150" />
+            @*<br/>
+            <br/>
+            <h1>Welcome</h1>*@
+
+            <br><br><br />
+
+            <form class="col-lg-12">
+                <div class="input-group" style="width:340px;text-align:center;margin:0 auto;">
+                    <input class="form-control input-lg" placeholder="Enter your Username" type="text">
+                    <p></p>
+                    <input class="form-control input-lg" placeholder="Enter your Password" type="password">
+                </div>
+            </form>
+            <a href='@Url.Action("MainPage", "Home")'>
+                <input class="btn btn-lg btn-primary" type='button' value='Login' />
+            </a>
+        </div>
+
+    </div> <!-- /row -->
+
+    <div class="row">
+
+        <div class="col-lg-12 text-center v-center" style="font-size:39pt;">
+            <a href="#"><i class="icon-google-plus"></i></a> <a href="#"><i class="icon-facebook"></i></a>  <a href="#"><i class="icon-twitter"></i></a> <a href="#"><i class="icon-github"></i></a> <a href="#"><i class="icon-pinterest"></i></a>
+        </div>
+
+    </div>
+
+    <br><br><br><br><br>
+
+</div> <!-- /container full -->
+
+<div class="container">
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3>About</h3></div>
+                <div class="panel-body">
+                    The future in how we read and analyse data is here, we have developed a system that will allow the user to
+                    analyse the data that they want, and will potentially save the NHS in England millions every year.
+                    Along with saving the NHS money we also aim to improve the overall service of the NHS, and with this new and
+                    inventive way of reading data will allow officials to highlight areas that need more investment and 
+                    Highlight areas that are overachieving also.
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3>Technology</h3></div>
+                <div class="panel-body">
+                    We use cutting edge technology to give us a stern advantage over our competators, with this technology
+                    we can deliever results about the open data relating to the NHS with the highest of accuracy and relaiablitty.
+               <p></p>
+                    <p></p>
+                 </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3>Why Us?</h3></div>
+                <div class="panel-body">
+                    We simply believe that we have delivered a system that reaches and surpasses the expectations of the
+                    user. We believe that the data that we have collected is more than capable of improving a woring down
+                    NHS service.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <br><br>
+            
+            <br><br>
+        </div>
+    </div>
+</div>
+

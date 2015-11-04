@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @*@Styles.Render("~/Content/css")*@
+    @Styles.Render("~/Content/bootstrap.css")
+    @Styles.Render("~/Content/bootstrap.min.css")
+
+    @Styles.Render("~/Content/DotNetTheme/css/styles.css")
+    @Styles.Render("~/Content/DotNetTheme/css/simple-sidebar.css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href='@Url.Action("MainPage", "Home")'>Home</a>
+
+                </div>
+                
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                    @*<form class="navbar-form navbar-right">
+                        <input type="text" class="form-control" placeholder="Search...">
+                    </form>*@
+                </div>
+            </div>
+        </nav>
+
+    
+        <div class="container-fluid">
+
+            <div class="row row-offcanvas row-offcanvas-left">
+
+                <div class="col-sm-3 col-md-2 sidebar-offcanvas" id="sidebar"  role="navigation">
+
+                    <ul class="nav nav-sidebar">
+                        <li><a href='@Url.Action("MainPage", "Home")'><span class="glyphicon glyphicon-home"></span>  Home</a></li>
+                        <li><a href=@Url.Action("BindDecimalValues", "ServicesOrganisations")><span class="glyphicon glyphicon-file"></span>  Reports</a></li>
+                        <li><a href=@Url.Action("HighMap", "ServicesOrganisations")><span class="glyphicon glyphicon-map-marker"></span>  Maps</a></li>
+                    </ul>
+                    @*<ul class="nav nav-sidebar">
+                            <li><a href="">Nav item</a></li>
+                            <li><a href="">Nav item again</a></li>
+                            <li><a href="">One more nav</a></li>
+                            <li><a href="">Another nav item</a></li>
+                            <li><a href="">More navigation</a></li>
+                        </ul>
+                        <ul class="nav nav-sidebar">
+                            <li><a href="">Nav item again</a></li>
+                            <li><a href="">One more nav</a></li>
+                            <li><a href="">Another nav item</a></li>
+                        </ul>*@
+
+                </div><!--/span-->
+
+                <div class="col-sm-9 col-md-10 main">
+
+                    <!--toggle sidebar button-->
+                    <p class="visible-xs">
+                        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                    </p>
+
+
+                    @RenderBody()
+
+
+
+                </div><!--/row-->
+            </div>
+        </div>
+
+
+ 
+
+<footer>
+
+</footer>
+
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+            @RenderSection("scripts", required: false)
+
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+    
+</body>
+</html>
